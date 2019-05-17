@@ -1,0 +1,29 @@
+//base styles
+
+//display toggles
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+// undo default settings
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+//image styles
+img {
+  display: block;
+  max-width: 100%;
+  width: 40%;
+}
+
+form {
+  display: block;
+}
