@@ -149,6 +149,11 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 .show {
   display: block; }
 
+.wrapper {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto; }
+
 ul {
   list-style: none;
   padding: 0;
@@ -162,5 +167,18 @@ img {
 form {
   display: block; }
 
+body {
+  font-size: 125%;
+  color: #333; }
+
+h1 {
+  font-family: "Mr Bedfort", cursive;
+  font-size: 3.0rem;
+  color: #1e405e; }
+
+p {
+  font-family: "Oswald", sans-serif;
+  font-weight: 300; }
+
 header {
-  height: 90vh; }
+  background-position: center center; }

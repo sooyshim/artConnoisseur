@@ -1,5 +1,19 @@
 //typography styles
 
-h1 {
-  font-family: sans-serif;
+body {
+  font-size: 125%;
+  color: $black;
 }
+
+h1 {
+  font-family: $lgFont;
+  font-size: 3.0rem;
+  color: rgb(30, 64, 94);
+}
+
+p {
+  font-family: $smFont;
+  font-weight: 300;
+}
+
+
