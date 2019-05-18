@@ -163,28 +163,21 @@ quizApp.generateChoices = (
 // --------------------------------------------------------------------------------
 // function group: generate a quiz for each painting
 
-// function: display the selected paintings
-quizApp.displayPaintings = paintingsArray => {
-  for (i = 0; i < paintingsArray.length; i++) {
-    const $galleryItem = $(`<li>`);
-    const $paintingImg = $(`<img>`).attr("src", paintingsArray[i].url);
-    $galleryItem.append($paintingImg);
-    $(".gallery").append($galleryItem);
-  }
-};
-
-//function: retrieve information about the painting in question
+//function: retrieve information about the painting in question and update the info in the DOM
 quizApp.paintingInQuestion = (paintings, index) => {
   //populate image to the quiz form
   const paintingURL = paintings[index].url;
   $(".quizImg").attr("src", paintingURL);
+
+  //update the index of quiz for users
+  $(".quizIndex").text(`${index + 1} / ${quizApp.questionNumbers}`)
 
   //store answers
   quizApp.paintingCountry = paintings[index].country;
   quizApp.paintingCentury = paintings[index].century;
 };
 
-//function: update the current quiz with answer options
+//function: update the DOM with answer options
 quizApp.populateQuizOptions = (answerOptions, inputName, domElement) => {
   for (i = 0; i < answerOptions.length; i++) {
     const $answerOptions = $(`
@@ -239,10 +232,13 @@ quizApp.generateQuiz = index => {
 quizApp.countries = quizApp.createDataArray(paintings, "country");
 quizApp.centuries = quizApp.createDataArray(paintings, "century");
 quizApp.paintingsForQuiz = quizApp.selectRandomPaintings(paintings);
+quizApp.userCountries = [];
+quizApp.userCenturies = [];
 quizApp.questionNumbers = quizApp.paintingsForQuiz.length;
 quizApp.answerOptionNumbers = 3;
 quizApp.currentIndex = 0;
 quizApp.userScore = 0;
+
 
 ///Init comes before user interaction starts
 quizApp.init = () => {
@@ -253,8 +249,8 @@ quizApp.init = () => {
   // When user clicks on "view score", users' result will be displayed.
   quizApp.playQuiz();
 
-  // 3. When users click "replay", the entire website will be reloaded to play again.
-  $(".resultContainer").on("click", "button", function() {
+  // When users click "replay", the entire website will be reloaded to play again.
+  $(".replay").on("click", function() {
     location.reload(true);
   });
 };
@@ -262,6 +258,8 @@ quizApp.init = () => {
 // --------------------------------------------------------------------------------
 // function group: start and play the quiz
 // these functions require user input to run, thus they are declared after the init
+
+// function: start the quiz and display the first question
 quizApp.startQuiz = () => {
   $(".start").on("click", function() {
     // Hide the header and display the quiz section
@@ -274,15 +272,11 @@ quizApp.startQuiz = () => {
       .removeClass("hide")
       .addClass("show");
 
-    // Display paintings for the quiz
-    quizApp.displayPaintings(quizApp.paintingsForQuiz);
-    // hide for the mobile view (mobile fist design)
-    $(".gallery").addClass("hide");
-
     quizApp.generateQuiz(quizApp.currentIndex);
   });
 };
 
+//function: user answers are recorded and new quiz is generated
 quizApp.playQuiz = () => {
   $(".submit").on("click", function(e) {
     e.preventDefault();
@@ -300,13 +294,18 @@ quizApp.playQuiz = () => {
     const $userCountry = $("input[class=countryChoice]:checked").val();
     const $userCentury = $("input[class=centuryChoice]:checked").val();
 
+    //collect user inputs in arrays (for later use)
+    quizApp.userCountries.push($userCountry);
+    quizApp.userCenturies.push($userCentury);
+
     // get user scores
     const score = quizApp.getScores($userCountry, $userCentury);
     // update scores
     quizApp.userScore = quizApp.userScore + score;
 
     //remove the current options
-    quizApp.removeOptions();
+    $("input[type=radio]").remove();
+    $("label").remove();
 
     //update the index of painting in question and generate a new quiz
     if (quizApp.currentIndex < quizApp.questionNumbers - 1) {
@@ -314,35 +313,17 @@ quizApp.playQuiz = () => {
       //generate a new quiz
       quizApp.generateQuiz(quizApp.currentIndex);
     } else {
-      // quizApp.displayScores();
-      quizApp.displayScores();
+      quizApp.endQuiz();
     }
   });
 };
+
 // --------------------------------------------------------------------------------
 // function group: calculate and display users score from user inputs
 
-//function: convert user inputs to a score
-quizApp.getScores = (userCountry, userCentury) => {
-  const countryAnswer = quizApp.paintingCountry;
-  const centuryAnswer = quizApp.paintingCentury;
-
-  if (countryAnswer === userCountry && centuryAnswer === userCentury) {
-    return 1;
-  } else {
-    return 0;
-  }
-};
-
-//function: clean up the current quiz options from the DOM
-quizApp.removeOptions = () => {
-  $("input[type=radio]").remove();
-  $("label").remove();
-};
-
 //function: give a emoji for each corresponding score
 quizApp.emojiFeedback = () => {
-  const faces = {
+  const emojiFaces = {
     a: "far fa-angry",
     b: "far fa-flushed",
     c: "far fa-frown",
@@ -356,60 +337,101 @@ quizApp.emojiFeedback = () => {
   );
 
   if (quizApp.userScore === 0) {
-    feedbackIcon.addClass(faces.a);
+    return feedbackIcon.addClass(emojiFaces.a);
   } else if (quizApp.userScore === 1) {
-    feedbackIcon.addClass(faces.b);
+    return feedbackIcon.addClass(emojiFaces.b);
   } else if (quizApp.userScore === 2) {
-    feedbackIcon.addClass(faces.c);
+    return feedbackIcon.addClass(emojiFaces.c);
   } else if (quizApp.userScore === 3) {
-    feedbackIcon.addClass(faces.d);
+    return feedbackIcon.addClass(emojiFaces.d);
   } else if (quizApp.userScore === 4) {
-    feedbackIcon.addClass(faces.e);
+    return feedbackIcon.addClass(emojiFaces.e);
   } else if (quizApp.userScore === 5) {
-    feedbackIcon.addClass(faces.f);
+    return feedbackIcon.addClass(emojiFaces.f);
   } else {
-    feedbackIcon.addClass(faces.g);
+    return feedbackIcon.addClass(emojiFaces.g);
   }
-
-  return feedbackIcon;
 };
 
-//function: display users score
-quizApp.displayScores = () => {
-  //display view score button
-  $(".quizSection").append(
-    `<button class="viewScore">View your score</button>`
-  );
+//function: convert user inputs to a score
+quizApp.getScores = (userCountry, userCentury) => {
+  const countryAnswer = quizApp.paintingCountry;
+  const centuryAnswer = quizApp.paintingCentury;
+
+  if (countryAnswer === userCountry && centuryAnswer === userCentury) {
+    return 1;
+  } else {
+    return 0;
+  }
+};
+
+//function: end quiz & open score reviewing section
+quizApp.endQuiz = () => {
   $("input[type=submit]").addClass("hide");
   //remove the quiz image
   $(".quizImg").remove();
   //hide quiz
   $("fieldset").addClass("hide");
+  //display view score button
+  $(".quizSection").append(
+    `<button class="viewScore">View your score</button>`
+  );
+  //hide quizIndex
+  $(".quizIndex").addClass("hide");
 
-  //display the result section
+  quizApp.viewScore();
+  quizApp.reviewAnswers(quizApp.paintingsForQuiz);
+};
+
+//function: view score
+quizApp.viewScore = () => {
   $(".viewScore").on("click", function() {
-    $(".quiz")
+    $(".quizSection")
       .removeClass("show")
       .addClass("hide");
-    $(".result")
+
+    $(".resultSection")
       .removeClass("hide")
       .addClass("show");
 
-    //display the replay button
-    $(".replay").removeClass("hide").addClass("show");
-
     //show users' score
     $(".resultContainer").prepend(`
-      <h2>Your level of connoisseurship is: </h2>
       <p>${quizApp.userScore} / ${quizApp.questionNumbers}</p>
     `);
     
     quizApp.emojiFeedback();
+  });
+};
+
+//function: review answers
+quizApp.reviewAnswers = (paintings) => {
+  $(".reviewAnswers").on("click", function() {
+    $(".resultSection").removeClass("show").addClass("hide");
+    $(".review").removeClass("hide").addClass("show");
+
+    for (i = 0; i < paintings.length; i++) {
+      const $galleryItem = $(`<li>`);
+      const $paintingImg = $(`<img>`).attr("src", paintings[i].url);$paintingImg.attr("alt", "");
+      const $paintingTitle = $(`<p>${paintings[i].title}</p>`)
+      const $paintingAuthor = $(`<p>${paintings[i].author}</p>`)
+      const $paintingCountry = $(`<p>${paintings[i].country}</p>`)
+      const $paintingCentury = $(`<p>${paintings[i].century}</p>`)
+      const $userInputs = $(`<div class="userInputs"><h3>Your answers:</h3></div>`);
+      const $userCountry = $(`<p>${quizApp.userCountries[i]}</p>`)
+      const $userCentury = $(`<p>${quizApp.userCenturies[i]}</p>`);
+      $galleryItem.append($paintingImg, $paintingTitle, $paintingAuthor, $paintingCountry, $paintingCentury, $userInputs);
+      $userInputs.append($userCountry, $userCentury);
+      $(".gallery").append($galleryItem);
+    }
+
+
+    console.log(quizApp.userCountries);
     
   });
 };
 
-// --------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------
 // Document ready
 $(document).ready(function() {
   quizApp.init();
