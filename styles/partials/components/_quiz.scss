@@ -4,83 +4,128 @@
 
 .quizSection {
   padding: 30px 0;
-  background: $primary;
+
+  @include bp(md) {
+    padding: 0;
+  }
+
+  .wrapper {
+    @include bp(md) {
+      height: calc(100vh - 150px - 70px);
+    }
+  }
 }
 
+//quiz form
 form {
-  margin: 0 10px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   //media query
+  @include bp(sm) {
+    width: 80%;
+  }
+
   @include bp(md) {
-    padding-top: 100px;
+    width: 100%;
+    padding-top: 60px;
     flex-direction: row;
-    height: 72vh;
+    align-items: flex-start;
   }
 
   //focus,active, hover states
-  input:focus + label {
-    color: $accent;
-  }
-
-  input:active + label {
+  input:focus + label,
+  input:checked + label  {
     background-color: $accent;
-    color: $primary;
-
   }
 
-  label {
-    &:hover,
-    &:focus {
-      color: $accent;
-    }
+  input:hover + label {
+    text-shadow: 0.5px 0.5px $secondary;
+    border-bottom: 1.5px solid $darkAccent;
+  }
+  
+  input:active + label {
+    background-color: $primary;
+    color: $darkAccent;
+    text-shadow: 0.5px 0.5px $darkAccent;
   }
 }
 
+//quiz images
 .imgContainer {
   @include bp(md) {
-    flex-basis: 40%;
+    flex-basis: 45%;
+    margin-right: 30px;
+  }
+
+  @include bp(lg) {
+    flex-basis: 45%;
   }
 }
 
+//quiz question container
 .questionContainer {
+
   @include bp(md) {
-    flex-basis: 60%;
+    flex-basis: 55%;
 
     display: flex;
     flex-direction: column;
   }
+
+  @include bp(lg) {
+    flex-basis: 50%;
+  }
 }
 
+//quiz index
 .quizIndex {
   margin: 0;
   text-align: right;
-}
-
-.quizImg {
-  box-shadow: 10px 10px $secondary;
-
-  @include bp(md) {
-    width: 90%;
-  }
 }
 
 .quizImg,
 fieldset {
   margin-bottom: $elemMargin;
 
-  @include bp(md) {
+  @include bp(sm) {
     margin-bottom: 35px;
   }
 }
 
+.quizImg {
+  box-shadow: 10px 10px $secondary;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include bp(md) {
+    width: 85%;
+  }
+
+  @include bp(lg) {
+    width: 70%;
+  }
+
+  @include bp(xlg) {
+    width: 60%;
+  }
+}
+
+//quiz questions
 fieldset {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid $accent;
+
+  @include bp(sm) {
+    font-size: 1.2rem;
+  }
+
+  @include bp(lg) {
+    font-size: 1.4rem;
+  }
 
   input, 
   label {
@@ -93,3 +138,4 @@ fieldset {
     display: none;
   }
 }
+

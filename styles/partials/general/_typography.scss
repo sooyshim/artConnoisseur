@@ -7,14 +7,29 @@ body {
 
 h1 {
   font-family: $lgFont;
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   letter-spacing: 1.7px;
   line-height: 1.2;
   font-weight: normal;
   color: $primary;
 
   @include bp(sm) {
-    font-size: 3.6rem;
+    font-size: 3.4rem;
+  }
+}
+
+h2 {
+  font-size: 2.0rem;
+  font-weight: bold;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+
+  @include bp(sm) {
+    font-size: 2.4rem;
+  }
+
+  @include bp(md) {
+    font-size: 3.0rem;
   }
 }
 
@@ -33,7 +48,9 @@ h3 {
 
 p {
   font-family: $smFont;
-  font-weight: 300;
+  font-weight: normal;
+  line-height: 1.3;
+  letter-spacing: 0.5px
 }
 
 form {

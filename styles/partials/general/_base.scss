@@ -20,6 +20,32 @@ body {
   justify-content: space-between;
 }
 
+header,
+main {
+  background-image:  url(../assets/background.png);
+}
+
+
+//sections with fixed heights
+// 100vh - header - footer
+.headerContent .wrapper,
+.viewScore,
+.resultSection {
+  height: calc(100vh - 135px - 70px);
+
+  @include bp(sm) {
+    height: calc(100vh - 150px - 70px);
+  }
+}
+
+.resultContainer {
+  height: calc(100vh - 135px - 70px - 140px);
+
+  @include bp(sm) {
+    height: calc(100vh - 150px - 70px - 160px);
+  }
+}
+
 .wrapper {
   width: 90%;
   max-width: 1440px;

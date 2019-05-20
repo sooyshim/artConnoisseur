@@ -1,4 +1,5 @@
 // result section styles
+// view your score + result container
 
 .resultSection {
   border: 1px solid $primary;
@@ -11,6 +12,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include bp(sm) {
+      padding: 20px 0;
+    }
   }
 
   button {
@@ -18,32 +23,17 @@
   }
 }
 
-//sections: view score, result
-//general
-
-.viewScore,
-.resultContainer {
-  height: $mobileHeight;
-}
-
 //view score section
 .viewScore {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  
-  @include bp(xs) {
-    height: 85vh;
-  }
 
-  @include bp(md) {
-    height: 80vh;
-  } 
-  
   p {
     text-align: center;
+    font-size: 1.6rem;
 
-    @include bp(md) {
+    @include bp(sm) {
       font-size: 2.4rem;
     }
 
@@ -56,27 +46,29 @@
 
 //score result 
 .resultContainer {
+  padding: 20px;
+  margin: 20px 0;
   flex-direction: column;
   justify-content: space-around;
-  border: 5px solid $accent;
-  border-radius: 10px;
-  background-color: $secondary;
-  color: $primary;
-  padding: 30px;
-  margin: 20px 0;
-
-  @include bp(xs) {
-    height: 70vh;
-  }
+  border: 1.5px solid $accent;
+  border-radius: 5px;
 
   h3 {
     margin-top: 0;
+
+    @include bp(lg) {
+      margin-bottom: 0;
+    }
   }
 
   i {
-    margin-bottom: 30px;
-    font-size: 4.0rem;
+    margin: 10px 0;
+    font-size: 3.2rem;
     font-weight: normal;
+
+    @include bp(lg) {
+      font-size: 4.0rem;
+    }
   }
 
   p {
@@ -85,6 +77,6 @@
   }
 }
 
-.reviewAnswers {
+.bottomButton {
   margin-bottom: 20px;
 }
