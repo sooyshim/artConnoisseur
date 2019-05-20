@@ -1,0 +1,146 @@
+// button styles
+
+//general styles
+button,
+input[type=submit] {
+  margin: 0 auto;
+  border: none; 
+  border-radius: 20px;
+  text-align: center;
+}
+
+button {
+  background-color: $secondary;
+  color: $primary;
+  font-size: 2.6rem;
+}
+
+//header section button
+//start button
+.start {
+  width: 90%;
+  padding: 10px 20px; 
+  margin-bottom: 40px;
+  border: $bdStyle $accent;
+  font-family: $lgFont;
+  text-transform: capitalize;
+  letter-spacing: 1.6px;
+  line-height: 1.2;
+
+  &:hover,
+  &:focus {
+    box-shadow: 3px 3px 10px $secondary;
+    background-color: $accent;
+    border: $bdStyle $secondary;
+    color: $secondary;
+  }
+
+  &:active {
+    box-shadow: 3px 3px 10px $secondary;
+    background-color: $primary;
+    color: $secondary;
+  }
+}
+
+//quiz section buttons
+.navReset, 
+input[type=submit],
+.bottomButton {
+  text-transform: lowercase;
+  text-align: center;
+  font-family: $smFont;
+}
+
+.navReset, 
+.bottomButton,
+.reviewAnswers {
+  border: 3px solid $accent;
+
+  &:hover,
+  &:focus {
+    background-color: $accent;
+    color: $secondary;
+  }
+
+  &:active {
+    background-color: $primary;
+    font-weight: bold;
+  }
+}
+
+//submit button
+input[type=submit]  {
+  width: 100%;
+  border: $bdStyle $accent;
+  background-color: $secondary;
+  color: $primary;
+  font-size: 2.0rem;
+}
+
+input[type=submit],
+.viewScoreButton,
+.bottomButton {
+
+   &:hover,
+   &:focus {
+    background-color: $accent;
+    border: $bdStyle $secondary;
+    color: $secondary;
+  }
+  
+  &:active {
+    background-color: $primary;
+    border: $bdStyle $secondary;
+    color: $secondary;
+    font-weight: bold;
+  }
+
+}
+//reset button on the top
+.navReset {
+  width: 40px;
+  height: 40px;
+  background-color: $secondary;
+  font-size: 1.0rem;
+}
+
+//view score button
+.viewScoreButton {
+  width: 95%;
+  height: 100px;
+  margin: 0 auto;
+  border: $bdStyle $accent;
+  font-size: 2.0rem;
+  text-transform: lowercase;
+}
+
+//view result button
+.reviewAnswers {
+  width: 100%;
+  padding: 10px 15px;
+  border: $bdStyle $accent;
+  background-color: $accent;
+  color: $secondary;
+  font-size: 1.5rem;
+
+  &:hover,
+  &:focus {
+    background-color: $primary;
+    border: $bdStyle $primary;
+  }
+
+  &:focus {
+    border: $bdStyle $accent;
+  }
+}
+
+//button replay button
+.bottomButton {
+  width: 100%;
+  padding: 5px 10px;
+  background-color: $secondary;
+  border: $bdStyle $accent;
+  color: $primary;
+  font-family: $smFont;
+  font-size: 1.4rem;
+}

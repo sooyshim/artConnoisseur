@@ -1,0 +1,45 @@
+//review section styles
+
+.reviewSection {
+  padding-bottom: 50px;
+  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  h3 {
+    margin-bottom: 0;
+  }
+}
+
+
+.gallery {
+  li {
+    margin: 20px 0;
+    border: 1px solid $accent;
+    padding: 10px;
+  }
+  p {
+    margin: 0;
+  }
+
+  .title {
+    margin-top: 10px;
+    border-bottom: 1px solid $accent;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .userAnswers {
+    margin-top: 20px;
+    font-size: 1.4rem;
+    border-bottom: 1px solid $accent;
+  }
+}
+
+.bottomButton {
+  align-self: center;
+}

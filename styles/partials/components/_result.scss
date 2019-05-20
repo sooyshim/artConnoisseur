@@ -1,2 +1,64 @@
-// result styles
+// result section styles
 
+.resultSection {
+  border: 1px solid $primary;
+  border-left: none;
+  border-right: none;
+  background-color: $secondary;
+  color: $primary;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    align-self: center;
+  }
+}
+
+//view score section
+.viewScore {
+  height: $mobileHeight;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  p {
+    text-align: center;
+  }
+
+}
+
+//score result 
+.resultContainer {
+  height: $mobileHeight;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 5px solid $accent;
+  border-radius: 10px;
+  background-color: $secondary;
+  color: $primary;
+  padding: 30px;
+  margin: 20px 0;
+
+  h3 {
+    margin-top: 0;
+  }
+
+  i {
+    margin-bottom: 30px;
+    font-size: 4.0rem;
+    font-weight: normal;
+  }
+
+  p {
+    font-size: 3.0rem;
+    margin: 10px 0;
+  }
+}
+
+.reviewAnswers {
+  margin-bottom: 20px;
+}

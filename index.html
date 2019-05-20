@@ -4,61 +4,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Art Connoisseurship Test</title>
-  <link href="https://fonts.googleapis.com/css?family=Mr+Bedfort|Oswald:300, 400&display=swap" rel="stylesheet"> 
+  <title>Art Connoisseur</title>
+  <link href="https://fonts.googleapis.com/css?family=Alef|Akronim&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
   <header id="home">
-    <div class="wrapper">
-      <h1>Connoisseur</h1>
-      <p class="subTitle">Do you know European paintings? <br> Let's test your art connoisseurship!</p>
-      <p>For the following six paintings, guess the country and century of production</p>
-      <button class="start">Start</button>
+    <div class="miniNav">
+      <div class="wrapper">
+        <h1>Art Connoisseur</h1>
+        <button class="reset navReset hide" tabindex="6">Reset</button>
+      </div>
     </div>
+    <section class="headerContent">    
+      <div class="wrapper">
+        <div class="contentContainer">
+          <p class="subTitle">Test your eye for paintings!</p>
+          <p>For the following six paintings, guess the country and century of production.</p>
+        </div>
+        <button class="start">Start</button>
+      </div>
+    </section>
   </header>
   <main id="main" class="hide">
-    <div class="wrapper">
-      <h2>Connoisseurship Quiz!</h2>
-      <section class="quiz quizSection hide">
-        <form action=""  class="quiz quizForm hide">
-          <img class="quizImg" alt="">
-          <p class="quizIndex"></p>
-          <fieldset class="countryQuestion">
-            <legend>What is the country of production?</legend>
-          </fieldset>
-          <fieldset class="centuryQuestion">
-            <legend>What is the century of production?</legend>
-          </fieldset>
-          <label for="submit" class="visuallyHidden">Submit</label>
-          <input type="submit" id="submit" name="submit" class="submit" value="submit">
-        </form>
-      </section>
-      <section class="resultSection hide">
-        <div class="resultContainer">
-          <h3>Your level of connoisseurship is: </h3>
-          <!-- Load final results here -->
-          <button class="reviewAnswers">Review your answers</button>
-          <button class="replay">Replay</button>
+      <section class="quizSection hide">
+        <div class="wrapper">
+          <form action="" class="quizForm hide">
+            <img class="quizImg" alt="">
+            <p class="quizIndex"></p>
+            <fieldset class="countryQuestion">
+              <legend>What is the country of production?</legend>
+            </fieldset>
+            <fieldset class="centuryQuestion">
+              <legend>What is the century of production?</legend>
+            </fieldset>
+            <label for="submit" class="visuallyHidden">Submit</label>
+            <input type="submit" id="submit" name="submit" class="submit" value="submit" tabindex="5">
+          </form>
         </div>
       </section>
-      <section class="review hide">
-        <button class="replay">Replay</button>
-        <h3>Review your answer</h3>
-        <ul class="gallery">
-          <!-- Load paintings here-->
-        </ul>
-        <button class="replay">Replay</button>
+      <section class="resultSection hide">
+        <div class="wrapper">
+          <div class="viewScore hide">
+            <p>You finished the quiz. <br> Let's check your score!</p>
+            <button class="viewScoreButton" tabindex="5">View your score</button>
+          </div>
+          <div class="resultContainer hide">
+            <h3>Your level of connoisseurship is: </h3>
+            <!-- Load final results here -->
+          </div>
+          <button class="reviewAnswers hide" tabindex="0">Review your answers</button>
+        </div>
+      </section>
+      <section class="reviewSection hide">
+        <div class="wrapper">
+          <h3>Review your answers</h3>
+          <ul class="gallery">
+            <!-- Load paintings here-->
+          </ul>
+          <button class="reset bottomButton">Replay</button>
+        </div>
       </section>
     </div>
   </main>
   <footer>
-    <p>Artworks and images from the Metropolitan Museum of Art</p>
-    <p>Illustrations by Caress Press Design</p>
+    <div class="wrapper">
+      <p>Created by SooYeon Shim</p>
+      <p>Artworks and images from the Metropolitan Museum of Art</p>
+    </div>
   </footer>
   <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
-  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

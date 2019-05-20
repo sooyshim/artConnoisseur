@@ -2,8 +2,65 @@
 
 
 //font-families
-$lgFont: 'Mr Bedfort', cursive;
-$smFont: 'Oswald', sans-serif;
+$lgFont: 'Akronim', cursive;
+$smFont: 'Alef', sans-serif;
 
 //color
 $black: #333;
+$white: #F5FFFA;
+$primary: rgb(252, 251, 245);
+$secondary: #24231c;
+$accent: #9678B6;
+
+//buttons
+$bdStyle: 5px solid;
+
+//height
+$mobileHeight: calc(100vh - 70px - 60px);
+
+//mixins
+// Variables for media query
+$bp-xs: 320px; 
+$bp-sm: 645px;
+$bp-md: 760px;
+$bp-lg: 960px; 
+$bp-xlg: 1200px; 
+$bp-xxl: 1440px;
+
+// Mixin for media query
+@mixin bp($class) {
+  @if $class == xs {
+    @media (min-width: $bp-xs) { @content; }
+  }
+ 
+  @else if $class == sm {
+    @media (min-width: $bp-sm) { @content; }
+  }
+ 
+  @else if $class == md {
+    @media (min-width: $bp-md) { @content; }
+  }
+ 
+  @else if $class == lg {
+    @media (min-width: $bp-lg) { @content; }
+  }
+
+  @else if $class == xlg {
+    @media (min-width: $bp-xlg) { @content; }
+  }
+
+  @else if $class == xxl {
+    @media (min-width: $bp-xxl) { @content; }
+  }
+
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg, xlg, xxl";
+  }
+}
+
+// extends
+
+
+// margins
+// margin between elements
+$elemMargin: 20px;

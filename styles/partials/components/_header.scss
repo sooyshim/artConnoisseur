@@ -1,5 +1,55 @@
 // header styles
 
 header {
-  background-position: center center;
+  background-image: url(../assets/header.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
+.miniNav {
+  min-height: 60px;
+  background: $secondary;
+  
+  .wrapper {
+    margin: 0 auto;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h1 {
+    margin: 0;
+    flex: 3;
+  }
+
+  button {
+    flex: 1;
+  }
+}
+
+.headerContent {
+
+  color: $secondary;
+
+  .wrapper {
+    height: $mobileHeight;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .subTitle {
+    font-size: 2.4rem;
+  }
+
+  p {
+    margin: 40px 0;
+    font-size: 1.6rem;
+  }
+
+  button {
+    align-self: center;
+  }
+}
+

@@ -1,2 +1,64 @@
-//quiz styles
+//quiz + view score sections styles
 
+//quiz section styles
+
+.quizSection {
+  padding: 30px 0;
+  background: $primary;
+}
+
+form {
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  input:focus + label {
+    color: $accent;
+  }
+
+  input:active + label {
+    background-color: $accent;
+    color: $primary;
+
+  }
+
+  label {
+    &:hover,
+    &:focus {
+      color: $accent;
+    }
+  }
+}
+
+.quizIndex {
+  margin: 0;
+  text-align: right;
+}
+
+.quizImg {
+  box-shadow: 10px 10px $secondary;
+}
+
+.quizImg,
+fieldset {
+  margin-bottom: $elemMargin;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid $accent;
+
+  input, 
+  label {
+    margin-bottom: 10px;
+  }
+}
+
+.optionContainer {
+  input {
+    display: none;
+  }
+}

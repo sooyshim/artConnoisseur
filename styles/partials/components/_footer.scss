@@ -1,0 +1,14 @@
+// footer styles
+
+footer {
+  max-height: 70px;
+  padding: 10px 0;
+  background: $secondary;
+  font-family: $smFont;
+  color: $primary;
+  font-size: 0.8rem;
+
+  p {
+    margin: 0;
+  }
+}
