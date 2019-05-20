@@ -14,13 +14,57 @@
   }
 }
 
-
 .gallery {
+   @include bp(xlg) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   li {
     margin: 20px 0;
-    border: 1px solid $accent;
+    border: 2px solid $accent;
     padding: 10px;
+
+    @include bp(md) {
+      display: flex;
+    }
+
+    @include bp(lg) {
+      font-size: 1.4rem;
+    }
+
+    @include bp(xlg) {
+      flex-basis: 47%;
+      padding: 50px 10px 150px;
+    }
+
+    &:nth-child(2n) {
+      margin-left: 2%;
+    }
+
+    img {
+      @include bp(md) {
+        width: 70%;
+        flex-basis: 40%;
+      }
+
+      @include bp(lg) {
+        flex-basis: 30%
+      }
+    }
+
+    .reviewContents {
+      @include bp(md) {
+        flex-basis: 60%;
+        margin-left: 30px;
+      }
+
+      @include bp(lg) {
+        flex-basis: 70%;
+      }
+    }
   }
+
   p {
     margin: 0;
   }
@@ -31,6 +75,10 @@
     font-style: italic;
     font-weight: bold;
     font-size: 1.2rem;
+
+    @include bp(lg) {
+      font-size: 1.6rem;
+    }
   }
 
   .userAnswers {

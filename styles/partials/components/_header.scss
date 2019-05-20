@@ -10,12 +10,20 @@ header {
   min-height: 60px;
   background: $secondary;
   
+  @include bp(sm) {
+    min-height: 100px;
+  }
+
   .wrapper {
     margin: 0 auto;
     padding-top: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include bp(sm) {
+      padding: 30px 0;
+    }
   }
 
   h1 {
@@ -29,7 +37,6 @@ header {
 }
 
 .headerContent {
-
   color: $secondary;
 
   .wrapper {
@@ -37,6 +44,14 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
+    @include bp(xs) {
+      height: 85.3vh;
+    }
+
+    @include bp(sm) {
+      height: 90vh;
+    }
   }
 
   .subTitle {

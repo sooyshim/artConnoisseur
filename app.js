@@ -434,18 +434,21 @@ quizApp.reviewAnswers = (paintings) => {
     for (i = 0; i < paintings.length; i++) {
       const $galleryItem = $(`<li class="galleryItem" tabindex=0>`);
       const $paintingImg = $(`<img>`).attr("src", paintings[i].url);$paintingImg.attr("alt", "");
+      const $paintingInfo = $(`<div class="paintingInfo"></div>`);
       const $paintingTitle = $(
         `<p class="title">${paintings[i].title}</p>`
       );
-      $paintingTitle.focus();
       const $paintingAuthor = $(`<p>${paintings[i].author}</p>`)
       const $paintingCountry = $(`<p>${paintings[i].country}</p>`)
       const $paintingCentury = $(`<p>${paintings[i].century}</p>`)
       const $userInputs = $(`<div class="userInputs"><p class="userAnswers">Your answers:</p></div>`);
       const $userCountry = $(`<p>${quizApp.userCountries[i]}</p>`)
       const $userCentury = $(`<p>${quizApp.userCenturies[i]}</p>`);
-      $galleryItem.append($paintingImg, $paintingTitle, $paintingAuthor, $paintingCountry, $paintingCentury, $userInputs);
+      $paintingInfo.append($paintingTitle, $paintingAuthor, $paintingCountry, $paintingCentury);
       $userInputs.append($userCountry, $userCentury);
+      $reviewContents = $(`<div class="reviewContents">`)
+      $reviewContents.append($paintingInfo, $userInputs);
+      $galleryItem.append($paintingImg, $reviewContents);
       $(".gallery").append($galleryItem);
     }
 

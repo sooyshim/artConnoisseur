@@ -13,6 +13,14 @@ form {
   flex-direction: column;
   justify-content: space-between;
 
+  //media query
+  @include bp(md) {
+    padding-top: 100px;
+    flex-direction: row;
+    height: 72vh;
+  }
+
+  //focus,active, hover states
   input:focus + label {
     color: $accent;
   }
@@ -31,6 +39,21 @@ form {
   }
 }
 
+.imgContainer {
+  @include bp(md) {
+    flex-basis: 40%;
+  }
+}
+
+.questionContainer {
+  @include bp(md) {
+    flex-basis: 60%;
+
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .quizIndex {
   margin: 0;
   text-align: right;
@@ -38,11 +61,19 @@ form {
 
 .quizImg {
   box-shadow: 10px 10px $secondary;
+
+  @include bp(md) {
+    width: 90%;
+  }
 }
 
 .quizImg,
 fieldset {
   margin-bottom: $elemMargin;
+
+  @include bp(md) {
+    margin-bottom: 35px;
+  }
 }
 
 fieldset {

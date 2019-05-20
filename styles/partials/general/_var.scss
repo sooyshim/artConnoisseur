@@ -20,12 +20,13 @@ $mobileHeight: calc(100vh - 70px - 60px);
 
 //mixins
 // Variables for media query
-$bp-xs: 320px; 
-$bp-sm: 645px;
-$bp-md: 760px;
-$bp-lg: 960px; 
-$bp-xlg: 1200px; 
-$bp-xxl: 1440px;
+//mobile first design
+//bp-xxs: 320px (smallest screen)
+$bp-xs: 380px; 
+$bp-sm: 760px;
+$bp-md: 830px;
+$bp-lg: 1100px; 
+$bp-xlg: 1400px; 
 
 // Mixin for media query
 @mixin bp($class) {
@@ -49,12 +50,8 @@ $bp-xxl: 1440px;
     @media (min-width: $bp-xlg) { @content; }
   }
 
-  @else if $class == xxl {
-    @media (min-width: $bp-xxl) { @content; }
-  }
-
   @else {
-    @warn "Breakpoint mixin supports: xs, sm, md, lg, xlg, xxl";
+    @warn "Breakpoint mixin supports: xs, sm, md, lg, xlg";
   }
 }
 

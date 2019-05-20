@@ -18,22 +18,44 @@
   }
 }
 
+//sections: view score, result
+//general
+
+.viewScore,
+.resultContainer {
+  height: $mobileHeight;
+}
+
 //view score section
 .viewScore {
-  height: $mobileHeight;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-
-  p {
-    text-align: center;
+  
+  @include bp(xs) {
+    height: 85vh;
   }
 
+  @include bp(md) {
+    height: 80vh;
+  } 
+  
+  p {
+    text-align: center;
+
+    @include bp(md) {
+      font-size: 2.4rem;
+    }
+
+    @include bp(lg) {
+      font-size: 3.2rem;
+    }
+  }
+  
 }
 
 //score result 
 .resultContainer {
-  height: $mobileHeight;
   flex-direction: column;
   justify-content: space-around;
   border: 5px solid $accent;
@@ -42,6 +64,10 @@
   color: $primary;
   padding: 30px;
   margin: 20px 0;
+
+  @include bp(xs) {
+    height: 70vh;
+  }
 
   h3 {
     margin-top: 0;

@@ -186,9 +186,18 @@ h1 {
   line-height: 1.2;
   font-weight: normal;
   color: #fcfbf5; }
+  @media (min-width: 760px) {
+    h1 {
+      font-size: 3.6rem; } }
 
 h3 {
   font-size: 1.8rem; }
+  @media (min-width: 830px) {
+    h3 {
+      font-size: 2.6rem; } }
+  @media (min-width: 1100px) {
+    h3 {
+      font-size: 3.2rem; } }
 
 p {
   font-family: "Alef", sans-serif;
@@ -259,6 +268,9 @@ input[type=submit] {
   background-color: #24231c;
   color: #fcfbf5;
   font-size: 2.0rem; }
+  @media (min-width: 830px) {
+    input[type=submit] {
+      font-size: 2.2rem; } }
 
 input[type=submit]:hover, input[type=submit]:focus,
 .viewScoreButton:hover,
@@ -282,6 +294,12 @@ input[type=submit]:active,
   height: 40px;
   background-color: #24231c;
   font-size: 1.0rem; }
+  @media (min-width: 760px) {
+    .navReset {
+      width: 60px;
+      height: 70px;
+      font-size: 2.0rem;
+      padding: 10px 20px; } }
 
 .viewScoreButton {
   width: 95%;
@@ -290,6 +308,12 @@ input[type=submit]:active,
   border: 5px solid #9678B6;
   font-size: 2.0rem;
   text-transform: lowercase; }
+  @media (min-width: 830px) {
+    .viewScoreButton {
+      font-size: 2.6rem; } }
+  @media (min-width: 1100px) {
+    .viewScoreButton {
+      font-size: 3.2rem; } }
 
 .reviewAnswers {
   width: 100%;
@@ -303,6 +327,13 @@ input[type=submit]:active,
     border: 5px solid #fcfbf5; }
   .reviewAnswers:focus {
     border: 5px solid #9678B6; }
+  @media (min-width: 830px) {
+    .reviewAnswers {
+      width: 82%;
+      font-size: 2.0rem; } }
+  @media (min-width: 1100px) {
+    .reviewAnswers {
+      font-size: 3.2rem; } }
 
 .bottomButton {
   width: 100%;
@@ -312,6 +343,9 @@ input[type=submit]:active,
   color: #fcfbf5;
   font-family: "Alef", sans-serif;
   font-size: 1.4rem; }
+  @media (min-width: 830px) {
+    .bottomButton {
+      font-size: 2.0rem; } }
 
 header {
   background-image: url(../assets/header.jpg);
@@ -321,12 +355,18 @@ header {
 .miniNav {
   min-height: 60px;
   background: #24231c; }
+  @media (min-width: 760px) {
+    .miniNav {
+      min-height: 100px; } }
   .miniNav .wrapper {
     margin: 0 auto;
     padding-top: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    @media (min-width: 760px) {
+      .miniNav .wrapper {
+        padding: 30px 0; } }
   .miniNav h1 {
     margin: 0;
     flex: 3; }
@@ -340,6 +380,12 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-around; }
+    @media (min-width: 380px) {
+      .headerContent .wrapper {
+        height: 85.3vh; } }
+    @media (min-width: 760px) {
+      .headerContent .wrapper {
+        height: 90vh; } }
   .headerContent .subTitle {
     font-size: 2.4rem; }
   .headerContent p {
@@ -357,6 +403,11 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
+  @media (min-width: 830px) {
+    form {
+      padding-top: 100px;
+      flex-direction: row;
+      height: 72vh; } }
   form input:focus + label {
     color: #9678B6; }
   form input:active + label {
@@ -365,16 +416,33 @@ form {
   form label:hover, form label:focus {
     color: #9678B6; }
 
+@media (min-width: 830px) {
+  .imgContainer {
+    flex-basis: 40%; } }
+
+@media (min-width: 830px) {
+  .questionContainer {
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column; } }
+
 .quizIndex {
   margin: 0;
   text-align: right; }
 
 .quizImg {
   box-shadow: 10px 10px #24231c; }
+  @media (min-width: 830px) {
+    .quizImg {
+      width: 90%; } }
 
 .quizImg,
 fieldset {
   margin-bottom: 20px; }
+  @media (min-width: 830px) {
+    .quizImg,
+    fieldset {
+      margin-bottom: 35px; } }
 
 fieldset {
   display: flex;
@@ -401,16 +469,30 @@ fieldset {
   .resultSection button {
     align-self: center; }
 
+.viewScore,
+.resultContainer {
+  height: calc(100vh - 70px - 60px); }
+
 .viewScore {
-  height: calc(100vh - 70px - 60px);
   flex-direction: column;
   justify-content: space-around;
   align-items: center; }
+  @media (min-width: 380px) {
+    .viewScore {
+      height: 85vh; } }
+  @media (min-width: 830px) {
+    .viewScore {
+      height: 80vh; } }
   .viewScore p {
     text-align: center; }
+    @media (min-width: 830px) {
+      .viewScore p {
+        font-size: 2.4rem; } }
+    @media (min-width: 1100px) {
+      .viewScore p {
+        font-size: 3.2rem; } }
 
 .resultContainer {
-  height: calc(100vh - 70px - 60px);
   flex-direction: column;
   justify-content: space-around;
   border: 5px solid #9678B6;
@@ -419,6 +501,9 @@ fieldset {
   color: #fcfbf5;
   padding: 30px;
   margin: 20px 0; }
+  @media (min-width: 380px) {
+    .resultContainer {
+      height: 70vh; } }
   .resultContainer h3 {
     margin-top: 0; }
   .resultContainer i {
@@ -441,10 +526,41 @@ fieldset {
   .reviewSection h3 {
     margin-bottom: 0; }
 
+@media (min-width: 1400px) {
+  .gallery {
+    display: flex;
+    flex-wrap: wrap; } }
+
 .gallery li {
   margin: 20px 0;
-  border: 1px solid #9678B6;
+  border: 2px solid #9678B6;
   padding: 10px; }
+  @media (min-width: 830px) {
+    .gallery li {
+      display: flex; } }
+  @media (min-width: 1100px) {
+    .gallery li {
+      font-size: 1.4rem; } }
+  @media (min-width: 1400px) {
+    .gallery li {
+      flex-basis: 47%;
+      padding: 50px 10px 150px; } }
+  .gallery li:nth-child(2n) {
+    margin-left: 2%; }
+  @media (min-width: 830px) {
+    .gallery li img {
+      width: 70%;
+      flex-basis: 40%; } }
+  @media (min-width: 1100px) {
+    .gallery li img {
+      flex-basis: 30%; } }
+  @media (min-width: 830px) {
+    .gallery li .reviewContents {
+      flex-basis: 60%;
+      margin-left: 30px; } }
+  @media (min-width: 1100px) {
+    .gallery li .reviewContents {
+      flex-basis: 70%; } }
 
 .gallery p {
   margin: 0; }
@@ -455,6 +571,9 @@ fieldset {
   font-style: italic;
   font-weight: bold;
   font-size: 1.2rem; }
+  @media (min-width: 1100px) {
+    .gallery .title {
+      font-size: 1.6rem; } }
 
 .gallery .userAnswers {
   margin-top: 20px;
