@@ -1,6 +1,7 @@
 // header styles
+//---------------------------------------------------------------------
 
-
+// Top Banner (miniNav) 
 .miniNav {
   height: 120px;
   background: $secondary;
@@ -28,6 +29,7 @@
   }
 }
 
+//header Content
 .headerContent {
   .wrapper {
     display: flex;

@@ -161,28 +161,30 @@ header,
 main {
   background-image: url(../assets/background.png); }
 
+.wrapper {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto; }
+
 .headerContent .wrapper,
 .viewScore,
-.resultSection,
-.quizSection .wrapper {
+.resultSection {
   height: calc(100vh - 120px - 65px); }
   @media (min-width: 670px) {
     .headerContent .wrapper,
     .viewScore,
-    .resultSection,
-    .quizSection .wrapper {
+    .resultSection {
       height: calc(100vh - 150px - 65px); } }
+
+@media (min-width: 1200px) {
+  .quizSection .wrapper {
+    height: calc(100vh - 150px - 65px); } }
 
 .resultContainer {
   height: calc(100vh - 120px - 65px - 140px); }
   @media (min-width: 670px) {
     .resultContainer {
       height: calc(100vh - 150px - 65px - 160px); } }
-
-.wrapper {
-  width: 90%;
-  max-width: 1440px;
-  margin: 0 auto; }
 
 ul {
   list-style: none;
@@ -196,6 +198,10 @@ img {
 
 form {
   display: block; }
+
+a {
+  color: #604D7A;
+  text-transform: uppercase; }
 
 body {
   font-size: 125%;

@@ -1,6 +1,8 @@
 // result section styles
-// view your score + result container
+// view your score page + result page
+//--------------------------------------------------------------------
 
+//general
 .resultSection {
   border: 1px solid $primary;
   border-left: none;
@@ -24,6 +26,7 @@
 }
 
 //view score section
+//---------------------------------------------------------------------
 .viewScore {
   flex-direction: column;
   justify-content: space-around;
@@ -45,6 +48,7 @@
 }
 
 //score result 
+//---------------------------------------------------------------------
 .resultContainer {
   padding: 20px;
   margin: 20px 0;

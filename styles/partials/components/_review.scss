@@ -1,5 +1,7 @@
 //review section styles
+//---------------------------------------------------------------------
 
+//general
 .reviewSection {
   padding-bottom: 50px;
   
@@ -14,6 +16,7 @@
   }
 }
 
+//gallery
 .gallery {
 
   @include bp(xlg) {

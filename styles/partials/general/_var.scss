@@ -1,5 +1,8 @@
-//variables
+//variables & Mixin
+//---------------------------------------------------------------------
 
+//---------------------------------------------------------------------
+//Variables
 
 //font-families
 $lgFont: 'Akronim', cursive;
@@ -15,7 +18,9 @@ $darkAccent: #604D7A;
 $bdStyle: 5px solid;
 $shadow: 2px 2px 10px $secondary;
 
+//---------------------------------------------------------------------
 //mixins
+
 // Variables for media query
 //mobile first design
 $bp-xs: 320px; 

@@ -1,6 +1,8 @@
 //base styles
+//---------------------------------------------------------------------
 
 //display toggles
+//---------------------------------------------------------------------
 .hide {
   display: none;
 }
@@ -14,6 +16,7 @@
 }
 
 // body & wrapper styles
+//---------------------------------------------------------------------
 body {
   display: flex;
   flex-direction: column;
@@ -25,16 +28,26 @@ main {
   background-image:  url(../assets/background.png);
 }
 
+.wrapper {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
 
 //sections with fixed heights
 // 100vh - header - footer
 .headerContent .wrapper,
 .viewScore,
-.resultSection,
-.quizSection .wrapper {
+.resultSection {
   height: calc(100vh - 120px - 65px);
 
   @include bp(sm) {
+    height: calc(100vh - 150px - 65px);
+  }
+}
+
+.quizSection .wrapper {
+  @include bp(lg) {
     height: calc(100vh - 150px - 65px);
   }
 }
@@ -47,14 +60,8 @@ main {
   }
 }
 
-.wrapper {
-  width: 90%;
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
 // undo default settings
-
+//---------------------------------------------------------------------
 ul {
   list-style: none;
   padding: 0;
@@ -70,4 +77,9 @@ img {
 
 form {
   display: block;
+}
+
+a {
+  color: $darkAccent;
+  text-transform: uppercase;
 }
