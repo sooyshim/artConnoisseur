@@ -163,19 +163,21 @@ main {
 
 .headerContent .wrapper,
 .viewScore,
-.resultSection {
-  height: calc(100vh - 135px - 70px); }
+.resultSection,
+.quizSection .wrapper {
+  height: calc(100vh - 120px - 65px); }
   @media (min-width: 670px) {
     .headerContent .wrapper,
     .viewScore,
-    .resultSection {
-      height: calc(100vh - 150px - 70px); } }
+    .resultSection,
+    .quizSection .wrapper {
+      height: calc(100vh - 150px - 65px); } }
 
 .resultContainer {
-  height: calc(100vh - 135px - 70px - 140px); }
+  height: calc(100vh - 120px - 65px - 140px); }
   @media (min-width: 670px) {
     .resultContainer {
-      height: calc(100vh - 150px - 70px - 160px); } }
+      height: calc(100vh - 150px - 65px - 160px); } }
 
 .wrapper {
   width: 90%;
@@ -220,7 +222,7 @@ h2 {
       font-size: 2.4rem; } }
   @media (min-width: 960px) {
     h2 {
-      font-size: 3.0rem; } }
+      font-size: 2.8rem; } }
 
 h3 {
   font-size: 1.8rem; }
@@ -250,28 +252,37 @@ input[type=submit] {
   text-transform: lowercase;
   font-weight: bold;
   letter-spacing: 1px;
-  line-height: 1.2; }
+  line-height: 1.2;
+  border: 5px solid #CCCCFF;
+  background-color: #24231C;
+  color: #FCFBf5; }
+
+button:hover, button:focus,
+input[type=submit]:hover,
+input[type=submit]:focus {
+  background-color: #CCCCFF;
+  color: #24231C; }
+
+button:active,
+input[type=submit]:active {
+  background-color: #FCFBf5; }
 
 .start,
 input[type=submit],
 .bottomButton {
-  border: 5px solid #24231C;
-  background-color: #CCCCFF;
-  color: #24231C; }
-
-.navReset,
-.viewScoreButton,
-.reviewAnswers {
-  border: 5px solid #CCCCFF;
-  background-color: #24231C;
-  color: #FCFBf5; }
+  box-shadow: 2px 2px 10px #24231C; }
+  .start:hover, .start:focus,
+  input[type=submit]:hover,
+  input[type=submit]:focus,
+  .bottomButton:hover,
+  .bottomButton:focus {
+    border: 5px solid #24231C; }
 
 .start {
   width: 200px;
   height: 60px;
   margin-bottom: 20px;
-  font-size: 1.6rem;
-  box-shadow: 2px 2px 5px #24231C; }
+  font-size: 1.6rem; }
   @media (min-width: 670px) {
     .start {
       width: 250px;
@@ -280,7 +291,6 @@ input[type=submit],
   @media (min-width: 960px) {
     .start {
       width: 300px;
-      height: 120px;
       font-size: 2.7rem; } }
 
 input[type=submit] {
@@ -291,11 +301,20 @@ input[type=submit] {
     input[type=submit] {
       height: 70px;
       font-size: 2.4rem; } }
+  @media (min-width: 960px) {
+    input[type=submit] {
+      width: 75%;
+      height: 60px;
+      font-size: 2.2rem; } }
+  @media (min-width: 1200px) {
+    input[type=submit] {
+      width: 60%;
+      height: 70px; } }
 
 .navReset {
-  width: 40px;
-  height: 70px;
-  font-size: 1.4rem; }
+  width: 35px;
+  height: 50px;
+  font-size: 1.2rem; }
   @media (min-width: 670px) {
     .navReset {
       width: 60px;
@@ -342,46 +361,8 @@ input[type=submit] {
       height: 70px;
       font-size: 2.0rem; } }
 
-.start:hover, .start:focus, .start:active,
-input[type=submit]:hover,
-input[type=submit]:focus,
-input[type=submit]:active,
-.bottomButton:hover,
-.bottomButton:focus,
-.bottomButton:active {
-  box-shadow: 2px 2px 10px #24231C; }
-
-.start:hover, .start:focus,
-input[type=submit]:hover,
-input[type=submit]:focus,
-.bottomButton:hover,
-.bottomButton:focus {
-  background-color: #24231C;
-  border: 5px solid #CCCCFF;
-  color: #FCFBf5; }
-
-.start:active,
-input[type=submit]:active,
-.bottomButton:active {
-  background-color: #FCFBf5;
-  border: 5px solid #24231C;
-  color: #24231C; }
-
-.navReset:hover, .navReset:focus,
-.viewScoreButton:hover,
-.viewScoreButton:focus,
-.reviewAnswers:hover,
-.reviewAnswers:focus {
-  background-color: #CCCCFF;
-  color: #24231C; }
-
-.navReset:active,
-.viewScoreButton:active,
-.reviewAnswers:active {
-  background-color: #FCFBf5; }
-
 .miniNav {
-  height: 135px;
+  height: 120px;
   background: #24231C; }
   @media (min-width: 670px) {
     .miniNav {
@@ -423,8 +404,9 @@ input[type=submit]:active,
       font-size: 2.0rem; } }
   @media (min-width: 960px) {
     .headerContent p {
-      width: 80%;
-      font-size: 2.4rem; } }
+      width: 90%;
+      margin: 50px 0;
+      font-size: 2.2rem; } }
 
 .headerContent button {
   align-self: center; }
@@ -434,9 +416,6 @@ input[type=submit]:active,
   @media (min-width: 960px) {
     .quizSection {
       padding: 0; } }
-  @media (min-width: 960px) {
-    .quizSection .wrapper {
-      height: calc(100vh - 150px - 70px); } }
 
 form {
   margin: 0 auto;
@@ -445,13 +424,16 @@ form {
   justify-content: space-between; }
   @media (min-width: 670px) {
     form {
-      width: 80%; } }
+      width: 70%; } }
   @media (min-width: 960px) {
     form {
       width: 100%;
       padding-top: 60px;
       flex-direction: row;
       align-items: flex-start; } }
+  @media (min-width: 1200px) {
+    form {
+      padding-top: 40px; } }
   form input:focus + label,
   form input:checked + label {
     background-color: #CCCCFF; }
@@ -500,13 +482,13 @@ fieldset {
   margin-right: auto; }
   @media (min-width: 960px) {
     .quizImg {
-      width: 85%; } }
+      width: 80%; } }
   @media (min-width: 1200px) {
     .quizImg {
       width: 70%; } }
   @media (min-width: 1440px) {
     .quizImg {
-      width: 60%; } }
+      width: 55%; } }
 
 fieldset {
   display: flex;
@@ -515,9 +497,6 @@ fieldset {
   @media (min-width: 670px) {
     fieldset {
       font-size: 1.2rem; } }
-  @media (min-width: 1200px) {
-    fieldset {
-      font-size: 1.4rem; } }
   fieldset input,
   fieldset label {
     margin-bottom: 10px; }
@@ -601,7 +580,7 @@ fieldset {
   padding: 10px; }
   @media (min-width: 670px) {
     .gallery li {
-      width: 80%;
+      width: 70%;
       margin: 10px auto 40px; } }
   @media (min-width: 960px) {
     .gallery li {
@@ -663,8 +642,8 @@ fieldset {
   align-self: center; }
 
 footer {
-  min-height: 70px;
-  padding: 10px 0;
+  height: 65px;
+  padding: 5px 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -675,5 +654,8 @@ footer {
   @media (min-width: 670px) {
     footer {
       font-size: 1.0rem; } }
+  @media (min-width: 960px) {
+    footer {
+      text-align: center; } }
   footer p {
     margin: 0; }

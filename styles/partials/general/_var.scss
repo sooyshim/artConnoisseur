@@ -15,9 +15,6 @@ $darkAccent: #604D7A;
 $bdStyle: 5px solid;
 $shadow: 2px 2px 10px $secondary;
 
-//height
-$mobileHeight: calc(100vh - 75px - 70px);
-
 //mixins
 // Variables for media query
 //mobile first design
@@ -53,10 +50,3 @@ $bp-xlg: 1440px;
     @warn "Breakpoint mixin supports: xs, sm, md, lg, xlg";
   }
 }
-
-// extends
-
-
-// margins
-// margin between elements
-$elemMargin: 20px;
