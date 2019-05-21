@@ -47,7 +47,7 @@ main {
 }
 
 .quizSection .wrapper {
-  @include bp(lg) {
+  @include bp(md) {
     height: calc(100vh - 150px - 65px);
   }
 }

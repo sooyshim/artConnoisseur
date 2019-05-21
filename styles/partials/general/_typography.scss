@@ -45,6 +45,15 @@ h3 {
   @include bp(lg) {
     font-size: 3.2rem;
   }
+
+  //height query for iphone5 
+  @media (min-height: 560px) {
+    font-size: 1.4rem;
+  }
+
+  @media (min-height: 700px) {
+    font-size: 2.2rem;
+  }
 }
 
 

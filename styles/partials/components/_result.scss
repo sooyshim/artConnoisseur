@@ -57,6 +57,11 @@
   border: 1.5px solid $accent;
   border-radius: 5px;
 
+  //height query for iphone5
+  @media (min-height: 560px) {
+    padding: 10px;  
+  }
+
   h3 {
     margin-top: 0;
 
@@ -67,8 +72,17 @@
 
   i {
     margin: 10px 0;
-    font-size: 3.2rem;
+    font-size: 1.8rem;
     font-weight: normal;
+
+    //height query for iphone5 
+    @media (min-height: 560px) {
+      font-size: 2.0rem;
+    }
+
+    @media (min-height: 700px) {
+      font-size: 3.2rem;
+    } 
 
     @include bp(lg) {
       font-size: 4.0rem;

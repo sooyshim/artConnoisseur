@@ -19,7 +19,7 @@
 //gallery
 .gallery {
 
-  @include bp(xlg) {
+  @include bp(lg) {
     display: flex;
     flex-wrap: wrap;
   }
@@ -40,9 +40,6 @@
 
     @include bp(lg) {
       font-size: 1.4rem;
-    }
-
-    @include bp(xlg) {
       width: 45%;
       flex-basis: 47%;
       padding: 50px 10px 100px;
@@ -97,7 +94,7 @@
     margin-top: 10px;
     font-style: italic;
 
-    @include bp(xlg) {
+    @include bp(lg) {
       margin-top: 0;
     }
   }
