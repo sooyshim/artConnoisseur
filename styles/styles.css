@@ -500,8 +500,8 @@ fieldset {
       width: 80%; } }
   @media (min-width: 1200px) {
     .quizImg {
-      width: 70%; } }
-  @media (min-width: 1440px) {
+      width: 65%; } }
+  @media (min-width: 1400px) {
     .quizImg {
       width: 55%; } }
 
@@ -617,18 +617,19 @@ fieldset {
       padding: 50px 10px 100px; } }
   @media (min-width: 960px) {
     .gallery li img {
+      max-height: 350px;
       width: 50%; } }
   @media (min-width: 1200px) {
     .gallery li img {
       width: 40%; } }
-  @media (min-width: 1440px) {
+  @media (min-width: 1400px) {
     .gallery li img {
-      width: 50%; } }
+      max-height: 400px; } }
   @media (min-width: 960px) {
     .gallery li .reviewContents {
-      flex-basis: 60%;
+      flex-basis: 50%;
       margin-left: 30px; } }
-  @media (min-width: 1440px) {
+  @media (min-width: 1400px) {
     .gallery li .reviewContents {
       margin-left: 20px; } }
 

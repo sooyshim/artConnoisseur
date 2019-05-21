@@ -47,6 +47,7 @@
 
     img {
       @include bp(md) {
+        max-height: 350px;
         width: 50%;
       }
 
@@ -54,13 +55,14 @@
         width: 40%;
       }
       @include bp(xlg) {
-        width: 50%;
+        max-height: 400px;
+        // width: 45%;
       }
     }
 
     .reviewContents {
       @include bp(md) {
-        flex-basis: 60%;
+        flex-basis: 50%;
         margin-left: 30px;
       }
 
