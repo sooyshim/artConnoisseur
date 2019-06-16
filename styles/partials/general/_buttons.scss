@@ -5,16 +5,17 @@
 button,
 input[type=submit] {
   margin: 0 auto;
-  border-radius: 20px;
+  border-radius: 5px;
   font-family: $smFont;
   text-align: center;
-  text-transform: lowercase;
+  text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
   line-height: 1.2;
-  border: $bdStyle $accent;
+  border: $bdStyle $secondary;
   background-color: $secondary;
   color: $primary;
+  font-size: 1.6rem;
 }
 
 //hover, focus, active states
@@ -23,137 +24,74 @@ input[type=submit] {
 
   &:hover,
   &:focus {
-    background-color: $accent;
+    background-color: $primary;
     color: $secondary;
   }
 
   &:active {
-    background-color: $primary;
+    background-color: $secondary;
+    color: $accent;
   }
 }
 
 .start,
 input[type=submit],
 .bottomButton {
-  box-shadow: 7px 7px 6px $secondary;
   
   &:hover,
   &:focus {
     border: $bdStyle $secondary;
   }
+}
 
-  &:active {
-    box-shadow: none;
+.start,
+.viewScoreButton,
+.reviewAnswers,
+.bottomButton {
+  width: 200px;
+  height: 60px;
+
+  @include bp(sm) {
+    width: 250px;
+    height: 80px;
+    font-size: 2.0rem;
   }
 }
+
 
 //header button
 //start button
 .start {
-  width: 200px;
-  height: 60px;
   margin-bottom: 20px;
-  font-size: 1.6rem;
 
-  @include bp(sm) {
-    width: 250px;
-    height: 100px;
-    font-size: 2.2rem;
-  }
-
-  @include bp(md) {
-    width: 300px;
-    font-size: 2.7rem;
-  }
 }
 
 //quiz section buttons
-//submit button
-input[type=submit]  {
-  width: 100%;
-  height: 60px;
-  font-size: 2.0rem;
+//submit & rest button
 
-  @include bp(sm) {
-    height: 70px;
-    font-size: 2.4rem;
-  }
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type=submit],
+.reset  {
+  margin: 0;
+  height: 60px;
+  min-width: 50px;
+  width: 150px;
 
   @include bp(md) {
-    width: 75%;
-    height: 60px;
-    font-size: 2.2rem;
-  }
-
-  @include bp(lg) {
-    width: 60%;
-    height: 70px;
+    width: 200px;
   }
 }
 
-//reset button on the top
-.navReset {
-  width: 35px;
-  height: 50px;
-  font-size: 1.2rem;
 
-
-  @include bp(sm) {
-    width: 60px;
-    height: 70px;
-    font-size: 2.0rem;
-    padding: 10px 20px;
-  }
-}
 
 //result section buttons
 //view score button
 .viewScoreButton {
-  width: 95%;
-  height: 100px;
   margin: 0 auto;
-  font-size: 1.8rem;
-
-  @include bp(sm) {
-    font-size: 2.4rem;
-  }
-
-  @include bp(lg) {
-    font-size: 3.2rem;
-  }
 }
 
-//view result button
-.reviewAnswers {
-  width: 270px;
-  height: 70px; 
-  font-size: 1.4rem;
-
-  @include bp(sm) {
-    width: 400px;
-    font-size: 2.0rem;
-  }
-  
-  @include bp(md) {
-    width: 550px;
-    font-size: 2.2rem;
-  }
-
-  @include bp(lg) {
-    font-size: 2.4rem;
-  }
-}
-
-//replay button
-.bottomButton {
-  width: 280px;
-  height: 60px;
-  font-size: 1.4rem;
-
-  @include bp(sm) {
-    width: 370px;
-    height: 70px;
-    font-size: 2.0rem;
-  }
-}
 

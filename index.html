@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Art Connoisseur</title>
-  <link href="https://fonts.googleapis.com/css?family=Alef:400, 700|Akronim&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cabin:400,600|Open+Sans+Condensed:300&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
@@ -13,70 +13,74 @@
   <header id="home">
     <div class="miniNav">
       <div class="wrapper">
-        <h1>Art <br> Connoisseur</h1>
-        <button class="reset navReset hide" tabindex="6">Reset</button>
+        <h1>Art Connoisseur</h1>
       </div>
     </div>
-    <section class="headerContent">    
-      <div class="wrapper">
-        <div class="contentContainer">
-          <h2>Test your eye for paintings!</h2>
-          <p>For the following six paintings, guess the country and century of production.</p>
-        </div>
-        <button class="start">Start</button>
+  </div>
+  <section class="headerContent">    
+    <div class="wrapper">
+      <div class="contentContainer">
+        <h2>Test your eye for paintings!</h2>
+        <p>For the following six paintings, guess the country and century of production.</p>
       </div>
-    </section>
-  </header>
-  <main id="main" class="hide">
-      <section class="quizSection hide">
-        <div class="wrapper">
-          <form action="" class="quizForm hide">
-            <div class="imgContainer">
-              <!-- Image and alt updated by JS -->
-              <img class="quizImg" alt="">
-            </div>
-            <div class="questionContainer">
-              <p class="quizIndex"></p>
-              <fieldset class="countryQuestion">
-                <legend>What is the country of production?</legend>
-                <!-- Question updated by JS -->
-              </fieldset>
-              <fieldset class="centuryQuestion">
-                <legend>What is the century of production?</legend>
-                <!-- Question updated by JS -->
-              </fieldset>
+      <button class="start">Start</button>
+    </div>
+  </section>
+</header>
+<main id="main" class="hide">
+  <section class="quizSection hide">
+    <div class="wrapper">
+      <form action="" class="quizForm hide">
+        <div class="imgContainer">
+          <!-- Image and alt updated by JS -->
+          <img class="quizImg" alt="">
+        </div>
+        <div class="questionContainer">
+          <p class="quizIndex"></p>
+          <fieldset class="countryQuestion">
+            <legend>What is the country of production?</legend>
+            <!-- Question updated by JS -->
+          </fieldset>
+          <fieldset class="centuryQuestion">
+            <legend>What is the century of production?</legend>
+            <!-- Question updated by JS -->
+          </fieldset>
+          <div class="buttonContainer">
+            <button class="reset navReset hide" tabindex="6">Reset</button>
+            <div class="submitContainer">
               <label for="submit" class="visuallyHidden">Submit</label>
               <input type="submit" id="submit" name="submit" class="submit" value="submit" tabindex="5">
             </div>
-          </form>
-        </div>
-      </section>
-      <section class="resultSection hide">
-        <div class="wrapper">
-          <div class="viewScore hide">
-            <p>You've finished the quiz. <br> Let's check your score!</p>
-            <!-- Score updated by JS -->
-            <button class="viewScoreButton" tabindex="5">View your score</button>
           </div>
-          <div class="resultContainer hide">
-            <h3>Your level of connoisseurship is: </h3>
-            <!-- Load final results here by JS-->
-          </div>
-          <button class="reviewAnswers hide" tabindex="0">Review your answers</button>
         </div>
-      </section>
-      <section class="reviewSection hide">
-        <div class="wrapper">
-          <h2>Review your answers</h2>
-          <ul class="gallery">
-            <!-- Load paintings here by JS-->
-            <!-- Alt text is empty on purpose -->
-          </ul>
-          <button class="reset bottomButton">Replay</button>
-        </div>
-      </section>
+      </form>
     </div>
-  </main>
+  </section>
+  <section class="resultSection hide">
+    <div class="wrapper">
+      <div class="viewScore hide">
+        <p>You've finished the quiz. <br> Let's check your score!</p>
+        <!-- Score updated by JS -->
+        <button class="viewScoreButton" tabindex="5">View score</button>
+      </div>
+      <div class="resultContainer hide">
+        <h3>Your level of connoisseurship is: </h3>
+        <!-- Load final results here by JS-->
+      </div>
+      <button class="reviewAnswers hide" tabindex="0">Review</button>
+    </div>
+  </section>
+  <section class="reviewSection hide">
+    <div class="wrapper">
+      <h2>Review your answers</h2>
+      <ul class="gallery">
+        <!-- Load paintings here by JS-->
+        <!-- Alt text is empty on purpose -->
+      </ul>
+      <button class="reset bottomButton">Replay</button>
+    </div>
+  </section>
+</main>
   <footer>
     <div class="wrapper">
       <p>Created by SooYeon Shim</p>
