@@ -153,38 +153,15 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   display: flex; }
 
 body {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
-
-header,
-main {
-  background-image: url(../assets/background.png); }
 
 .wrapper {
   width: 90%;
   max-width: 1440px;
   margin: 0 auto; }
-
-.headerContent .wrapper,
-.viewScore,
-.resultSection {
-  height: calc(100vh - 120px - 65px); }
-  @media (min-width: 670px) {
-    .headerContent .wrapper,
-    .viewScore,
-    .resultSection {
-      height: calc(100vh - 150px - 65px); } }
-
-@media (min-width: 960px) {
-  .quizSection .wrapper {
-    height: calc(100vh - 150px - 65px); } }
-
-.resultContainer {
-  height: calc(100vh - 120px - 65px - 140px); }
-  @media (min-width: 670px) {
-    .resultContainer {
-      height: calc(100vh - 150px - 65px - 160px); } }
 
 ul {
   list-style: none;
@@ -200,35 +177,44 @@ form {
   display: block; }
 
 a {
-  color: #604D7A;
+  color: #4056A1;
   text-transform: uppercase; }
 
 body {
   font-size: 125%;
-  font-family: "Alef", sans-serif; }
+  font-family: "Open Sans Condensed", sans-serif; }
+
+h1,
+h2,
+footer {
+  font-family: "Cabin", sans-serif; }
+
+h1,
+h2 {
+  font-weight: 600; }
+
+h1, footer {
+  color: #FCFBf5; }
 
 h1 {
-  font-family: "Akronim", cursive;
-  font-size: 2.8rem;
-  letter-spacing: 1.7px;
+  font-size: 2.0rem;
   line-height: 1.2;
-  font-weight: normal;
-  color: #FCFBf5; }
+  text-transform: uppercase;
+  letter-spacing: 3.0px; }
   @media (min-width: 670px) {
     h1 {
-      font-size: 3.4rem; } }
+      font-size: 3.0rem; } }
 
 h2 {
-  font-size: 2.0rem;
-  font-weight: bold;
+  font-size: 1.6rem;
   line-height: 1.6;
   letter-spacing: 0.5px; }
   @media (min-width: 670px) {
     h2 {
-      font-size: 2.4rem; } }
+      font-size: 2.0rem; } }
   @media (min-width: 960px) {
     h2 {
-      font-size: 2.8rem; } }
+      font-size: 2.4rem; } }
 
 h3 {
   font-size: 1.8rem; }
@@ -238,193 +224,135 @@ h3 {
   @media (min-width: 1200px) {
     h3 {
       font-size: 3.2rem; } }
-  @media (min-height: 560px) {
-    h3 {
-      font-size: 1.4rem; } }
-  @media (min-height: 700px) {
-    h3 {
-      font-size: 2.2rem; } }
+
+header p {
+  font-size: 1.2rem; }
 
 p {
-  font-family: "Alef", sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
   font-weight: normal;
   line-height: 1.3;
-  letter-spacing: 0.5px; }
+  letter-spacing: 0.5px;
+  font-size: 1.0rem; }
 
 form {
-  font-family: "Alef", sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
   color: #24231C; }
+
+footer {
+  font-size: 0.8rem; }
 
 button,
 input[type=submit] {
   margin: 0 auto;
-  border-radius: 20px;
-  font-family: "Alef", sans-serif;
+  border-radius: 5px;
+  font-family: "Open Sans Condensed", sans-serif;
   text-align: center;
-  text-transform: lowercase;
+  text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
   line-height: 1.2;
-  border: 5px solid #CCCCFF;
+  border: 3px solid #24231C;
   background-color: #24231C;
-  color: #FCFBf5; }
+  color: #FCFBf5;
+  font-size: 1.6rem; }
 
 button:hover, button:focus,
 input[type=submit]:hover,
 input[type=submit]:focus {
-  background-color: #CCCCFF;
+  background-color: #FCFBf5;
   color: #24231C; }
 
 button:active,
 input[type=submit]:active {
-  background-color: #FCFBf5; }
+  background-color: #24231C;
+  color: #C5CBE3; }
+
+.start:hover, .start:focus,
+input[type=submit]:hover,
+input[type=submit]:focus,
+.bottomButton:hover,
+.bottomButton:focus {
+  border: 3px solid #24231C; }
 
 .start,
-input[type=submit],
+.viewScoreButton,
+.reviewAnswers,
 .bottomButton {
-  box-shadow: 7px 7px 6px #24231C; }
-  .start:hover, .start:focus,
-  input[type=submit]:hover,
-  input[type=submit]:focus,
-  .bottomButton:hover,
-  .bottomButton:focus {
-    border: 5px solid #24231C; }
-  .start:active,
-  input[type=submit]:active,
-  .bottomButton:active {
-    box-shadow: none; }
+  width: 200px;
+  height: 60px; }
+  @media (min-width: 670px) {
+    .start,
+    .viewScoreButton,
+    .reviewAnswers,
+    .bottomButton {
+      width: 250px;
+      height: 80px;
+      font-size: 2.0rem; } }
 
 .start {
-  width: 200px;
-  height: 60px;
-  margin-bottom: 20px;
-  font-size: 1.6rem; }
-  @media (min-width: 670px) {
-    .start {
-      width: 250px;
-      height: 100px;
-      font-size: 2.2rem; } }
-  @media (min-width: 960px) {
-    .start {
-      width: 300px;
-      font-size: 2.7rem; } }
+  margin-bottom: 20px; }
 
-input[type=submit] {
-  width: 100%;
-  height: 60px;
-  font-size: 2.0rem; }
-  @media (min-width: 670px) {
-    input[type=submit] {
-      height: 70px;
-      font-size: 2.4rem; } }
-  @media (min-width: 960px) {
-    input[type=submit] {
-      width: 75%;
-      height: 60px;
-      font-size: 2.2rem; } }
-  @media (min-width: 1200px) {
-    input[type=submit] {
-      width: 60%;
-      height: 70px; } }
+.buttonContainer {
+  display: flex;
+  justify-content: space-between; }
 
-.navReset {
-  width: 35px;
-  height: 50px;
-  font-size: 1.2rem; }
-  @media (min-width: 670px) {
-    .navReset {
-      width: 60px;
-      height: 70px;
-      font-size: 2.0rem;
-      padding: 10px 20px; } }
+input[type=submit],
+.reset {
+  margin: 0;
+  height: 60px;
+  min-width: 50px;
+  width: 150px; }
+  @media (min-width: 960px) {
+    input[type=submit],
+    .reset {
+      width: 200px; } }
 
 .viewScoreButton {
-  width: 95%;
-  height: 100px;
-  margin: 0 auto;
-  font-size: 1.8rem; }
-  @media (min-width: 670px) {
-    .viewScoreButton {
-      font-size: 2.4rem; } }
-  @media (min-width: 1200px) {
-    .viewScoreButton {
-      font-size: 3.2rem; } }
-
-.reviewAnswers {
-  width: 270px;
-  height: 70px;
-  font-size: 1.4rem; }
-  @media (min-width: 670px) {
-    .reviewAnswers {
-      width: 400px;
-      font-size: 2.0rem; } }
-  @media (min-width: 960px) {
-    .reviewAnswers {
-      width: 550px;
-      font-size: 2.2rem; } }
-  @media (min-width: 1200px) {
-    .reviewAnswers {
-      font-size: 2.4rem; } }
-
-.bottomButton {
-  width: 280px;
-  height: 60px;
-  font-size: 1.4rem; }
-  @media (min-width: 670px) {
-    .bottomButton {
-      width: 370px;
-      height: 70px;
-      font-size: 2.0rem; } }
+  margin: 0 auto; }
 
 .miniNav {
-  height: 120px;
-  background: #24231C; }
-  @media (min-width: 670px) {
-    .miniNav {
-      height: 150px; } }
+  border-bottom: 3px solid #24231C;
+  background-color: #24231C; }
   .miniNav .wrapper {
-    margin: 0 auto;
-    padding-bottom: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center; }
   .miniNav h1 {
-    margin-top: 20px;
-    flex: 3; }
+    flex: 3;
+    margin: 15px 0; }
   .miniNav button {
     flex: 1; }
 
-.headerContent .wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around; }
-
-@media (min-width: 960px) {
+.headerContent {
+  padding: 70px 0 100px; }
+  .headerContent .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
   .headerContent .contentContainer {
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center; } }
-
-@media (min-width: 960px) {
-  .headerContent h2 {
-    margin-bottom: 0; } }
-
-.headerContent p {
-  margin: 30px 0;
-  font-size: 1.4rem; }
-  @media (min-width: 670px) {
-    .headerContent p {
-      margin: 40px 0;
-      font-size: 2.0rem; } }
+    text-align: center; }
   @media (min-width: 960px) {
-    .headerContent p {
-      width: 90%;
-      margin: 50px 0;
-      font-size: 2.2rem; } }
-
-.headerContent button {
-  align-self: center; }
+    .headerContent h2 {
+      margin-bottom: 0; } }
+  .headerContent p {
+    margin: 30px 0; }
+    @media (min-width: 670px) {
+      .headerContent p {
+        margin: 40px 0;
+        font-size: 2.0rem;
+        width: 70%; } }
+    @media (min-width: 960px) {
+      .headerContent p {
+        width: 50%;
+        margin: 50px 0;
+        font-size: 2.2rem; } }
+  .headerContent button {
+    align-self: center; }
 
 .quizSection {
   padding: 30px 0; }
@@ -443,7 +371,7 @@ form {
   @media (min-width: 960px) {
     form {
       width: 100%;
-      padding-top: 60px;
+      padding: 30px 0;
       flex-direction: row;
       align-items: flex-start; } }
   @media (min-width: 1200px) {
@@ -451,14 +379,14 @@ form {
       padding-top: 40px; } }
   form input:focus + label,
   form input:checked + label {
-    background-color: #CCCCFF; }
+    background-color: #C5CBE3; }
   form input:hover + label {
     text-shadow: 0.5px 0.5px #24231C;
-    border-bottom: 1.5px solid #604D7A; }
+    border-bottom: 1.5px solid #4056A1; }
   form input:active + label {
     background-color: #FCFBf5;
-    color: #604D7A;
-    text-shadow: 0.5px 0.5px #604D7A; }
+    color: #4056A1;
+    text-shadow: 0.5px 0.5px #4056A1; }
 
 @media (min-width: 960px) {
   .imgContainer {
@@ -522,9 +450,7 @@ fieldset {
 .resultSection {
   border: 1px solid #FCFBf5;
   border-left: none;
-  border-right: none;
-  background-color: #24231C;
-  color: #FCFBf5; }
+  border-right: none; }
   .resultSection .wrapper {
     display: flex;
     flex-direction: column;
@@ -533,6 +459,7 @@ fieldset {
       .resultSection .wrapper {
         padding: 20px 0; } }
   .resultSection button {
+    margin-top: 50px;
     align-self: center; }
 
 .viewScore {
@@ -554,31 +481,33 @@ fieldset {
   margin: 20px 0;
   flex-direction: column;
   justify-content: space-around;
-  border: 1.5px solid #CCCCFF;
   border-radius: 5px; }
+  .resultContainer i,
+  .resultContainer p {
+    text-align: center; }
   @media (min-height: 560px) {
     .resultContainer {
       padding: 10px; } }
   .resultContainer h3 {
-    margin-top: 0; }
+    margin-top: 20px; }
     @media (min-width: 1200px) {
       .resultContainer h3 {
         margin-bottom: 0; } }
+  .resultContainer i,
+  .resultContainer p {
+    font-size: 1.8rem; }
+    @media (min-width: 960px) {
+      .resultContainer i,
+      .resultContainer p {
+        font-size: 3.0rem; } }
+    @media (min-width: 1200px) {
+      .resultContainer i,
+      .resultContainer p {
+        font-size: 4.0rem; } }
   .resultContainer i {
     margin: 10px 0;
-    font-size: 1.8rem;
     font-weight: normal; }
-    @media (min-height: 560px) {
-      .resultContainer i {
-        font-size: 2.0rem; } }
-    @media (min-height: 700px) {
-      .resultContainer i {
-        font-size: 3.2rem; } }
-    @media (min-width: 1200px) {
-      .resultContainer i {
-        font-size: 4.0rem; } }
   .resultContainer p {
-    font-size: 3.0rem;
     margin: 10px 0; }
 
 .bottomButton {
@@ -600,7 +529,7 @@ fieldset {
 
 .gallery li {
   margin: 20px 0;
-  border: 2px solid #CCCCFF;
+  border: 1px solid #24231C;
   padding: 10px; }
   @media (min-width: 670px) {
     .gallery li {
@@ -628,7 +557,8 @@ fieldset {
   @media (min-width: 960px) {
     .gallery li .reviewContents {
       flex-basis: 50%;
-      margin-left: 30px; } }
+      margin-left: 30px;
+      min-height: 350px; } }
   @media (min-width: 1400px) {
     .gallery li .reviewContents {
       margin-left: 20px; } }
@@ -638,7 +568,7 @@ fieldset {
 
 .gallery .title,
 .gallery .userAnswers {
-  border-bottom: 2px solid #CCCCFF;
+  border-bottom: 1px solid #24231C;
   font-size: 1.2rem;
   font-weight: bold; }
   @media (min-width: 670px) {
@@ -665,18 +595,11 @@ fieldset {
   align-self: center; }
 
 footer {
-  height: 65px;
-  padding: 5px 0;
+  padding: 10px 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background: #24231C;
-  font-family: "Alef", sans-serif;
-  color: #FCFBf5;
-  font-size: 0.8rem; }
-  @media (min-width: 670px) {
-    footer {
-      font-size: 1.0rem; } }
+  background: #24231C; }
   @media (min-width: 960px) {
     footer {
       text-align: center; } }

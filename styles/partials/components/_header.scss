@@ -3,25 +3,18 @@
 
 // Top Banner (miniNav) 
 .miniNav {
-  height: 120px;
-  background: $secondary;
-
-  @include bp(sm) {
-    height: 150px;
-  }
+  border-bottom: $bdStyle $secondary;
+  background-color: $secondary;
 
   .wrapper {
-    margin: 0 auto;
-    padding-bottom: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
   }
 
   h1 {
-    margin-top: 20px;
     flex: 3;
+    margin: 15px 0;
   }
 
   button {
@@ -30,21 +23,21 @@
 }
 
 //header Content
-.headerContent {
+.headerContent {  
+  padding: 70px 0 100px;
+
   .wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-
+    justify-content: center;
   }
 
   .contentContainer {
-    @include bp(md) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   h2 {
@@ -55,15 +48,15 @@
 
   p {
     margin: 30px 0;
-    font-size: 1.4rem;
 
     @include bp(sm) {
       margin: 40px 0;
       font-size: 2.0rem;
+      width: 70%;
     }
 
     @include bp(md) {
-      width: 90%;
+      width: 50%;
       margin: 50px 0;
       font-size: 2.2rem;
     }

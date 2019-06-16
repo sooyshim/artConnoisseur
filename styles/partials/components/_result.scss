@@ -7,8 +7,8 @@
   border: 1px solid $primary;
   border-left: none;
   border-right: none;
-  background-color: $secondary;
-  color: $primary;
+  // background-color: $secondary;
+  // color: $primary;
 
   .wrapper {
     display: flex;
@@ -21,6 +21,7 @@
   }
 
   button {
+    margin-top: 50px;
     align-self: center;
   }
 }
@@ -54,8 +55,12 @@
   margin: 20px 0;
   flex-direction: column;
   justify-content: space-around;
-  border: 1.5px solid $accent;
   border-radius: 5px;
+
+  i,
+  p {
+    text-align: center;
+  }
 
   //height query for iphone5
   @media (min-height: 560px) {
@@ -63,34 +68,30 @@
   }
 
   h3 {
-    margin-top: 0;
+    margin-top: 20px;
 
     @include bp(lg) {
       margin-bottom: 0;
     }
   }
 
-  i {
-    margin: 10px 0;
+  i,
+  p {
     font-size: 1.8rem;
-    font-weight: normal;
 
-    //height query for iphone5 
-    @media (min-height: 560px) {
-      font-size: 2.0rem;
+    @include bp(md) {
+      font-size: 3.0rem;
     }
-
-    @media (min-height: 700px) {
-      font-size: 3.2rem;
-    } 
-
     @include bp(lg) {
       font-size: 4.0rem;
     }
   }
+  i {
+    margin: 10px 0;
+    font-weight: normal;
+  }
 
   p {
-    font-size: 3.0rem;
     margin: 10px 0;
   }
 }
