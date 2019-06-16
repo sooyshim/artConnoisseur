@@ -204,6 +204,9 @@ h1 {
   @media (min-width: 670px) {
     h1 {
       font-size: 3.0rem; } }
+  @media (min-width: 960px) {
+    h1 {
+      font-size: 3.5rem; } }
 
 h2 {
   font-size: 1.6rem;
@@ -211,10 +214,13 @@ h2 {
   letter-spacing: 0.5px; }
   @media (min-width: 670px) {
     h2 {
-      font-size: 2.0rem; } }
+      font-size: 2.2rem; } }
   @media (min-width: 960px) {
     h2 {
-      font-size: 2.4rem; } }
+      font-size: 2.6rem; } }
+  @media (min-width: 1200px) {
+    h2 {
+      font-size: 2.8rem; } }
 
 h3 {
   font-size: 1.8rem; }
@@ -224,9 +230,6 @@ h3 {
   @media (min-width: 1200px) {
     h3 {
       font-size: 3.2rem; } }
-
-header p {
-  font-size: 1.2rem; }
 
 p {
   font-family: "Open Sans Condensed", sans-serif;
@@ -241,6 +244,18 @@ form {
 
 footer {
   font-size: 0.8rem; }
+
+.headerContent p {
+  font-size: 1.2rem; }
+  @media (min-width: 670px) {
+    .headerContent p {
+      font-size: 1.5rem; } }
+  @media (min-width: 960px) {
+    .headerContent p {
+      font-size: 1.7rem; } }
+  @media (min-width: 1200px) {
+    .headerContent p {
+      font-size: 2.0rem; } }
 
 button,
 input[type=submit] {
@@ -344,13 +359,11 @@ input[type=submit],
     @media (min-width: 670px) {
       .headerContent p {
         margin: 40px 0;
-        font-size: 2.0rem;
         width: 70%; } }
     @media (min-width: 960px) {
       .headerContent p {
         width: 50%;
-        margin: 50px 0;
-        font-size: 2.2rem; } }
+        margin: 50px 0; } }
   .headerContent button {
     align-self: center; }
 

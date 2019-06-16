@@ -51,14 +51,12 @@
 
     @include bp(sm) {
       margin: 40px 0;
-      font-size: 2.0rem;
       width: 70%;
     }
 
     @include bp(md) {
       width: 50%;
       margin: 50px 0;
-      font-size: 2.2rem;
     }
   }
 

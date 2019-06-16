@@ -22,6 +22,8 @@ h1, footer {
   color: $primary;
 }
 
+
+
 h1 {
   font-size: 2.0rem;
   line-height: 1.2;
@@ -32,6 +34,10 @@ h1 {
     font-size: 3.0rem;
   }
 
+  @include bp(md) {
+    font-size: 3.5rem;
+  }
+
 }
 
 h2 {
@@ -40,11 +46,15 @@ h2 {
   letter-spacing: 0.5px;
 
   @include bp(sm) {
-    font-size: 2.0rem;
+    font-size: 2.2rem;
   }
 
   @include bp(md) {
-    font-size: 2.4rem;
+    font-size: 2.6rem;
+  }
+
+  @include bp(lg) {
+    font-size: 2.8rem;
   }
 }
 
@@ -58,10 +68,6 @@ h3 {
   @include bp(lg) {
     font-size: 3.2rem;
   }
-}
-
-header p {
-  font-size: 1.2rem;
 }
 
 p {
@@ -80,3 +86,21 @@ form {
 footer {
   font-size: 0.8rem;
 }
+
+
+.headerContent p {
+  font-size: 1.2rem;
+
+  @include bp(sm) {
+    font-size: 1.5rem;
+  }
+
+  @include bp(md) {
+    font-size: 1.7rem;
+  }
+
+  @include bp(lg) {
+    font-size: 2.0rem;
+  }
+}
+
