@@ -26,6 +26,7 @@ Century only | 0 point
 
 ### Programming Languages
 
-- HTML/CSS
+- HTML
+- CSS/SASS
 - JavaScript
 - jQuery
