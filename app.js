@@ -207,7 +207,7 @@ quizApp.populateQuizOptions = (answerOptions, inputName, domElement) => {
   for (i = 0; i < answerOptions.length; i++) {
     const $answerOptions = $(`
     <div className="optionContainer">
-      <input type="radio" id="${inputName}${i}" tabindex=${i} name=${inputName} class=${inputName} value="${
+      <input type="radio" id="${inputName}${i}" tabindex="0" name=${inputName} class=${inputName} value="${
       answerOptions[i]
     }"/>
       <label for="${inputName}${i}">${answerOptions[i]}</label>
