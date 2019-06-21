@@ -153,10 +153,12 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   display: flex; }
 
 body {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
+  @media (min-width: 960px) {
+    body {
+      height: 100vh; } }
 
 .wrapper {
   width: 90%;
@@ -317,7 +319,11 @@ input[type=submit],
   margin: 0;
   height: 60px;
   min-width: 50px;
-  width: 150px; }
+  width: 120px; }
+  @media (min-width: 670px) {
+    input[type=submit],
+    .reset {
+      width: 150px; } }
   @media (min-width: 960px) {
     input[type=submit],
     .reset {

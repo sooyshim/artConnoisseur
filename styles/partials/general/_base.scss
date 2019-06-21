@@ -18,10 +18,13 @@
 // body & wrapper styles
 //---------------------------------------------------------------------
 body {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @include bp(md) {
+    height: 100vh;
+  }
 }
 
 .wrapper {

@@ -325,6 +325,12 @@ quizApp.playQuiz = () => {
 
     //error handling: prevent unchecked inputs from submitting
     if (!$countryChoice.is(":checked") || !$centuryChoice.is(":checked")) {
+      // Swal.fire({
+      //   title: 'Error!',
+      //   text: 'Do you want to continue',
+      //   type: 'error',
+      //   confirmButtonText: 'Cool'
+      // });
       alert("Please select your answers");
       return false;
     }
