@@ -173,9 +173,10 @@ ul {
 img {
   display: block;
   max-width: 100%;
-  width: 100%; }
+  width: 90%; }
 
-form {
+form,
+button {
   display: block; }
 
 a {
@@ -205,10 +206,10 @@ h1 {
   letter-spacing: 3.0px; }
   @media (min-width: 670px) {
     h1 {
-      font-size: 3.0rem; } }
+      font-size: 2.4rem; } }
   @media (min-width: 960px) {
     h1 {
-      font-size: 3.5rem; } }
+      font-size: 2.8rem; } }
 
 h2 {
   font-size: 1.6rem;
@@ -258,6 +259,56 @@ footer {
   @media (min-width: 1200px) {
     .headerContent p {
       font-size: 2.0rem; } }
+
+@media (min-width: 670px) {
+  fieldset {
+    font-size: 1.2rem; } }
+
+.viewScore p {
+  text-align: center;
+  font-size: 1.6rem; }
+  @media (min-width: 670px) {
+    .viewScore p {
+      font-size: 2.4rem; } }
+  @media (min-width: 1200px) {
+    .viewScore p {
+      font-size: 3.2rem; } }
+
+.resultContainer i,
+.resultContainer p {
+  text-align: center;
+  font-size: 1.8rem; }
+  @media (min-width: 960px) {
+    .resultContainer i,
+    .resultContainer p {
+      font-size: 3.0rem; } }
+  @media (min-width: 1200px) {
+    .resultContainer i,
+    .resultContainer p {
+      font-size: 4.0rem; } }
+
+.resultContainer i {
+  font-weight: normal; }
+
+.title,
+.userAnswers {
+  font-size: 1.2rem;
+  font-weight: bold; }
+  @media (min-width: 670px) {
+    .title,
+    .userAnswers {
+      font-size: 1.4rem; } }
+  @media (min-width: 1200px) {
+    .title,
+    .userAnswers {
+      font-size: 1.8rem; } }
+
+.title {
+  font-style: italic; }
+
+@media (min-width: 1200px) {
+  .gallery li {
+    font-size: 1.4rem; } }
 
 button,
 input[type=submit] {
@@ -346,11 +397,10 @@ input[type=submit],
     flex: 1; }
 
 .headerContent {
-  padding: 70px 0 100px; }
-  .headerContent .wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
   .headerContent .contentContainer {
     padding-bottom: 50px;
     display: flex;
@@ -371,7 +421,8 @@ input[type=submit],
         width: 50%;
         margin: 50px 0; } }
   .headerContent button {
-    align-self: center; }
+    align-self: center;
+    margin: 0 auto; }
 
 .quizSection {
   padding: 30px 0; }
@@ -456,9 +507,6 @@ fieldset {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
-  @media (min-width: 670px) {
-    fieldset {
-      font-size: 1.2rem; } }
   fieldset input,
   fieldset label {
     margin-bottom: 10px; }
@@ -469,14 +517,10 @@ fieldset {
 .resultSection {
   border: 1px solid #FCFBf5;
   border-left: none;
-  border-right: none; }
-  .resultSection .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-    @media (min-width: 670px) {
-      .resultSection .wrapper {
-        padding: 20px 0; } }
+  border-right: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
   .resultSection button {
     margin-top: 50px;
     align-self: center; }
@@ -485,25 +529,14 @@ fieldset {
   flex-direction: column;
   justify-content: space-around;
   align-items: center; }
-  .viewScore p {
-    text-align: center;
-    font-size: 1.6rem; }
-    @media (min-width: 670px) {
-      .viewScore p {
-        font-size: 2.4rem; } }
-    @media (min-width: 1200px) {
-      .viewScore p {
-        font-size: 3.2rem; } }
 
 .resultContainer {
   padding: 20px;
   margin: 20px 0;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
   border-radius: 5px; }
-  .resultContainer i,
-  .resultContainer p {
-    text-align: center; }
   @media (min-height: 560px) {
     .resultContainer {
       padding: 10px; } }
@@ -512,20 +545,8 @@ fieldset {
     @media (min-width: 1200px) {
       .resultContainer h3 {
         margin-bottom: 0; } }
-  .resultContainer i,
-  .resultContainer p {
-    font-size: 1.8rem; }
-    @media (min-width: 960px) {
-      .resultContainer i,
-      .resultContainer p {
-        font-size: 3.0rem; } }
-    @media (min-width: 1200px) {
-      .resultContainer i,
-      .resultContainer p {
-        font-size: 4.0rem; } }
   .resultContainer i {
-    margin: 10px 0;
-    font-weight: normal; }
+    margin: 10px 0; }
   .resultContainer p {
     margin: 10px 0; }
 
@@ -559,7 +580,6 @@ fieldset {
       display: flex; } }
   @media (min-width: 1200px) {
     .gallery li {
-      font-size: 1.4rem;
       width: 45%;
       flex-basis: 47%;
       padding: 50px 10px 100px; } }
@@ -587,21 +607,10 @@ fieldset {
 
 .gallery .title,
 .gallery .userAnswers {
-  border-bottom: 1px solid #24231C;
-  font-size: 1.2rem;
-  font-weight: bold; }
-  @media (min-width: 670px) {
-    .gallery .title,
-    .gallery .userAnswers {
-      font-size: 1.4rem; } }
-  @media (min-width: 1200px) {
-    .gallery .title,
-    .gallery .userAnswers {
-      font-size: 1.8rem; } }
+  border-bottom: 1px solid #24231C; }
 
 .gallery .title {
-  margin-top: 10px;
-  font-style: italic; }
+  margin-top: 10px; }
   @media (min-width: 1200px) {
     .gallery .title {
       margin-top: 0; } }
@@ -614,13 +623,11 @@ fieldset {
   align-self: center; }
 
 footer {
-  padding: 10px 0;
+  padding: 15px 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background: #24231C; }
-  @media (min-width: 960px) {
-    footer {
-      text-align: center; } }
+  background: #24231C;
+  text-align: center; }
   footer p {
     margin: 0; }

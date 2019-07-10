@@ -39,7 +39,6 @@
     }
 
     @include bp(lg) {
-      font-size: 1.4rem;
       width: 45%;
       flex-basis: 47%;
       padding: 50px 10px 100px;
@@ -80,21 +79,10 @@
   .title,
   .userAnswers {
     border-bottom: 1px solid $secondary;
-    font-size: 1.2rem;
-    font-weight: bold;
-
-    @include bp(sm) {
-      font-size: 1.4rem;
-    }
-
-    @include bp(lg) {
-      font-size: 1.8rem;
-    }
   }
 
   .title {
     margin-top: 10px;
-    font-style: italic;
 
     @include bp(lg) {
       margin-top: 0;

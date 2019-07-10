@@ -24,13 +24,10 @@
 
 //header Content
 .headerContent {  
-  padding: 70px 0 100px;
-
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   .contentContainer {
     padding-bottom: 50px;
@@ -62,6 +59,7 @@
 
   button {
     align-self: center;
+    margin: 0 auto;
   }
 }
 

@@ -117,10 +117,6 @@ fieldset {
   flex-direction: column;
   justify-content: space-between;
 
-  @include bp(sm) {
-    font-size: 1.2rem;
-  }
-
   input, 
   label {
     margin-bottom: 10px;

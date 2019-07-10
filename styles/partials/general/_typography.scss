@@ -31,11 +31,11 @@ h1 {
   letter-spacing: 3.0px;
 
   @include bp(sm) {
-    font-size: 3.0rem;
+    font-size: 2.4rem;
   }
 
   @include bp(md) {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
   }
 
 }
@@ -104,3 +104,64 @@ footer {
   }
 }
 
+fieldset {
+  @include bp(sm) {
+    font-size: 1.2rem;
+  }
+}
+
+.viewScore p {
+  text-align: center;
+  font-size: 1.6rem;
+
+  @include bp(sm) {
+    font-size: 2.4rem;
+  }
+
+  @include bp(lg) {
+    font-size: 3.2rem;
+  } 
+}
+
+.resultContainer {
+  i,
+  p {
+    text-align: center;
+    font-size: 1.8rem;
+
+    @include bp(md) {
+      font-size: 3.0rem;
+    }
+    @include bp(lg) {
+      font-size: 4.0rem;
+    }
+  }
+
+  i {
+    font-weight: normal;
+  }
+}
+
+ .title,
+  .userAnswers {
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    @include bp(sm) {
+      font-size: 1.4rem;
+    }
+
+    @include bp(lg) {
+      font-size: 1.8rem;
+    }
+  }
+
+  .title {
+    font-style: italic;
+  }
+
+  .gallery li {
+    @include bp(lg) {
+      font-size: 1.4rem;
+    }
+  }
