@@ -48,13 +48,12 @@ input[type=submit],
 .viewScoreButton,
 .reviewAnswers,
 .bottomButton {
-  width: 200px;
+  width: 150px;
   height: 60px;
 
   @include bp(sm) {
-    width: 250px;
+    width: 200px;
     height: 80px;
-    font-size: 2.0rem;
   }
 }
 
@@ -78,19 +77,13 @@ input[type=submit],
 .reset  {
   margin: 0;
   height: 60px;
-  min-width: 50px;
-  width: 120px;
-
-  @include bp(sm) {
-    width: 150px;
-  }
+  min-width: 70px;
+  width: 150px;
 
   @include bp(md) {
     width: 200px;
   }
 }
-
-
 
 //result section buttons
 //view score button

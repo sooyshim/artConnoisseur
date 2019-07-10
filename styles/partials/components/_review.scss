@@ -28,6 +28,7 @@
     margin: 20px 0;
     border: 1px solid $secondary;
     padding: 10px;
+    
 
     @include bp(sm) {
       width: 70%;
@@ -36,25 +37,34 @@
 
     @include bp(md) {
       display: flex;
+      justify-content: space-between;
     }
 
     @include bp(lg) {
-      width: 45%;
-      flex-basis: 47%;
-      padding: 50px 10px 100px;
+      width: calc(50% - 35px);
+      padding: 25px 10px 50px;
+      // height: 450px;
+
+      &:nth-child(odd) {
+        margin: 0 35px 70px 0;
+      }
+
+      &:nth-child(even) {
+        margin: 0 0 70px 0;
+      }
     }
 
     img {
+      margin: 0 auto;
+
       @include bp(md) {
         max-height: 350px;
         width: 50%;
       }
 
-      @include bp(lg) {
-        width: 40%;
-      }
       @include bp(xlg) {
         max-height: 400px;
+        margin: 0;
       }
     }
 
@@ -63,10 +73,6 @@
         flex-basis: 50%;
         margin-left: 30px;
         min-height: 350px;
-      }
-
-      @include bp(xlg) {
-        margin-left: 20px;
       }
 
     }

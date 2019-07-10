@@ -22,13 +22,11 @@ h1, footer {
   color: $primary;
 }
 
-
-
 h1 {
   font-size: 2.0rem;
   line-height: 1.2;
   text-transform: uppercase;
-  letter-spacing: 3.0px;
+  letter-spacing: 1.5px;
 
   @include bp(sm) {
     font-size: 2.4rem;
@@ -46,11 +44,11 @@ h2 {
   letter-spacing: 0.5px;
 
   @include bp(sm) {
-    font-size: 2.2rem;
+    font-size: 2.0rem;
   }
 
   @include bp(md) {
-    font-size: 2.6rem;
+    font-size: 2.2rem;
   }
 
   @include bp(lg) {
@@ -58,7 +56,9 @@ h2 {
   }
 }
 
-h3 {
+h3,
+.viewScore p,
+.resultContainer  {
   font-size: 1.8rem;
 
   @include bp(md) {
@@ -87,58 +87,21 @@ footer {
   font-size: 0.8rem;
 }
 
-
 .headerContent p {
   font-size: 1.2rem;
 
-  @include bp(sm) {
+  @include bp(md) {
     font-size: 1.5rem;
   }
 
-  @include bp(md) {
-    font-size: 1.7rem;
-  }
-
   @include bp(lg) {
-    font-size: 2.0rem;
+    font-size: 1.8rem;
   }
 }
 
 fieldset {
   @include bp(sm) {
     font-size: 1.2rem;
-  }
-}
-
-.viewScore p {
-  text-align: center;
-  font-size: 1.6rem;
-
-  @include bp(sm) {
-    font-size: 2.4rem;
-  }
-
-  @include bp(lg) {
-    font-size: 3.2rem;
-  } 
-}
-
-.resultContainer {
-  i,
-  p {
-    text-align: center;
-    font-size: 1.8rem;
-
-    @include bp(md) {
-      font-size: 3.0rem;
-    }
-    @include bp(lg) {
-      font-size: 4.0rem;
-    }
-  }
-
-  i {
-    font-weight: normal;
   }
 }
 
@@ -150,10 +113,6 @@ fieldset {
     @include bp(sm) {
       font-size: 1.4rem;
     }
-
-    @include bp(lg) {
-      font-size: 1.8rem;
-    }
   }
 
   .title {
@@ -162,6 +121,6 @@ fieldset {
 
   .gallery li {
     @include bp(lg) {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
     }
   }

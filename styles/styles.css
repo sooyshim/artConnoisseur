@@ -203,7 +203,7 @@ h1 {
   font-size: 2.0rem;
   line-height: 1.2;
   text-transform: uppercase;
-  letter-spacing: 3.0px; }
+  letter-spacing: 1.5px; }
   @media (min-width: 670px) {
     h1 {
       font-size: 2.4rem; } }
@@ -217,21 +217,27 @@ h2 {
   letter-spacing: 0.5px; }
   @media (min-width: 670px) {
     h2 {
-      font-size: 2.2rem; } }
+      font-size: 2.0rem; } }
   @media (min-width: 960px) {
     h2 {
-      font-size: 2.6rem; } }
+      font-size: 2.2rem; } }
   @media (min-width: 1200px) {
     h2 {
       font-size: 2.8rem; } }
 
-h3 {
+h3,
+.viewScore p,
+.resultContainer {
   font-size: 1.8rem; }
   @media (min-width: 960px) {
-    h3 {
+    h3,
+    .viewScore p,
+    .resultContainer {
       font-size: 2.6rem; } }
   @media (min-width: 1200px) {
-    h3 {
+    h3,
+    .viewScore p,
+    .resultContainer {
       font-size: 3.2rem; } }
 
 p {
@@ -250,45 +256,16 @@ footer {
 
 .headerContent p {
   font-size: 1.2rem; }
-  @media (min-width: 670px) {
-    .headerContent p {
-      font-size: 1.5rem; } }
   @media (min-width: 960px) {
     .headerContent p {
-      font-size: 1.7rem; } }
+      font-size: 1.5rem; } }
   @media (min-width: 1200px) {
     .headerContent p {
-      font-size: 2.0rem; } }
+      font-size: 1.8rem; } }
 
 @media (min-width: 670px) {
   fieldset {
     font-size: 1.2rem; } }
-
-.viewScore p {
-  text-align: center;
-  font-size: 1.6rem; }
-  @media (min-width: 670px) {
-    .viewScore p {
-      font-size: 2.4rem; } }
-  @media (min-width: 1200px) {
-    .viewScore p {
-      font-size: 3.2rem; } }
-
-.resultContainer i,
-.resultContainer p {
-  text-align: center;
-  font-size: 1.8rem; }
-  @media (min-width: 960px) {
-    .resultContainer i,
-    .resultContainer p {
-      font-size: 3.0rem; } }
-  @media (min-width: 1200px) {
-    .resultContainer i,
-    .resultContainer p {
-      font-size: 4.0rem; } }
-
-.resultContainer i {
-  font-weight: normal; }
 
 .title,
 .userAnswers {
@@ -298,17 +275,13 @@ footer {
     .title,
     .userAnswers {
       font-size: 1.4rem; } }
-  @media (min-width: 1200px) {
-    .title,
-    .userAnswers {
-      font-size: 1.8rem; } }
 
 .title {
   font-style: italic; }
 
 @media (min-width: 1200px) {
   .gallery li {
-    font-size: 1.4rem; } }
+    font-size: 1.2rem; } }
 
 button,
 input[type=submit] {
@@ -347,16 +320,15 @@ input[type=submit]:focus,
 .viewScoreButton,
 .reviewAnswers,
 .bottomButton {
-  width: 200px;
+  width: 150px;
   height: 60px; }
   @media (min-width: 670px) {
     .start,
     .viewScoreButton,
     .reviewAnswers,
     .bottomButton {
-      width: 250px;
-      height: 80px;
-      font-size: 2.0rem; } }
+      width: 200px;
+      height: 80px; } }
 
 .start {
   margin-bottom: 20px; }
@@ -369,12 +341,8 @@ input[type=submit],
 .reset {
   margin: 0;
   height: 60px;
-  min-width: 50px;
-  width: 120px; }
-  @media (min-width: 670px) {
-    input[type=submit],
-    .reset {
-      width: 150px; } }
+  min-width: 70px;
+  width: 150px; }
   @media (min-width: 960px) {
     input[type=submit],
     .reset {
@@ -577,30 +545,31 @@ fieldset {
       margin: 10px auto 40px; } }
   @media (min-width: 960px) {
     .gallery li {
-      display: flex; } }
+      display: flex;
+      justify-content: space-between; } }
   @media (min-width: 1200px) {
     .gallery li {
-      width: 45%;
-      flex-basis: 47%;
-      padding: 50px 10px 100px; } }
-  @media (min-width: 960px) {
-    .gallery li img {
-      max-height: 350px;
-      width: 50%; } }
-  @media (min-width: 1200px) {
-    .gallery li img {
-      width: 40%; } }
-  @media (min-width: 1400px) {
-    .gallery li img {
-      max-height: 400px; } }
+      width: calc(50% - 35px);
+      padding: 25px 10px 50px; }
+      .gallery li:nth-child(odd) {
+        margin: 0 35px 70px 0; }
+      .gallery li:nth-child(even) {
+        margin: 0 0 70px 0; } }
+  .gallery li img {
+    margin: 0 auto; }
+    @media (min-width: 960px) {
+      .gallery li img {
+        max-height: 350px;
+        width: 50%; } }
+    @media (min-width: 1400px) {
+      .gallery li img {
+        max-height: 400px;
+        margin: 0; } }
   @media (min-width: 960px) {
     .gallery li .reviewContents {
       flex-basis: 50%;
       margin-left: 30px;
       min-height: 350px; } }
-  @media (min-width: 1400px) {
-    .gallery li .reviewContents {
-      margin-left: 20px; } }
 
 .gallery p {
   margin: 0; }
