@@ -105,22 +105,26 @@ fieldset {
   }
 }
 
- .title,
-  .userAnswers {
+.resultSection p {
+  font-size: 2.0rem;
+}
+
+.title,
+.userAnswers {
+  font-size: 1.2rem;
+  font-weight: bold;
+
+  @include bp(sm) {
+    font-size: 1.4rem;
+  }
+}
+
+.title {
+  font-style: italic;
+}
+
+.gallery li {
+  @include bp(lg) {
     font-size: 1.2rem;
-    font-weight: bold;
-
-    @include bp(sm) {
-      font-size: 1.4rem;
-    }
   }
-
-  .title {
-    font-style: italic;
-  }
-
-  .gallery li {
-    @include bp(lg) {
-      font-size: 1.2rem;
-    }
-  }
+}

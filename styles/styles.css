@@ -267,6 +267,9 @@ footer {
   fieldset {
     font-size: 1.2rem; } }
 
+.resultSection p {
+  font-size: 2.0rem; }
+
 .title,
 .userAnswers {
   font-size: 1.2rem;
@@ -321,7 +324,7 @@ input[type=submit]:focus,
 .reviewAnswers,
 .bottomButton {
   width: 150px;
-  height: 60px; }
+  height: 70px; }
   @media (min-width: 670px) {
     .start,
     .viewScoreButton,
@@ -484,6 +487,7 @@ fieldset {
 
 .resultSection {
   border: 1px solid #FCFBf5;
+  padding-bottom: 30px;
   border-left: none;
   border-right: none;
   display: flex;
@@ -585,8 +589,7 @@ fieldset {
       margin-top: 0; } }
 
 .gallery .userAnswers {
-  margin-top: 20px;
-  text-transform: lowercase; }
+  margin-top: 20px; }
 
 .bottomButton {
   align-self: center; }
